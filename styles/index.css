@@ -1,0 +1,13 @@
+*, :after, :before {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    background: linear-gradient(rgb(180, 188, 219), rgb(231, 212, 214));
+}
