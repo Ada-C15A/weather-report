@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather App</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,900;1,400&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="container">
+		<div id="controls">
+			<h1>Weather App</h1>
+			<p>For the city of <span id="city">_</span></p>
+			<section class="control">
+				<h2>City</h2>
+				<input type="text" >
+			</section>
+			<section class="control">
+				<h2>Sky</h2>
+				<form action="" class="sky-selects">
+					<label for="sky">Choose a car:</label>
+					<select name="sky" id="sky">
+					  <option value="cloudy">cloudy</option>
+					  <option value="rainy">rainy</option>
+					  <option value="sunny">sunny</option>
+					  <option value="windy">windy</option>
+					</select>
+				</form>
+			</section>
+			<section class="control">
+				<h2>Temperature</h2>
+				<p class="temperature today">64&deg;</p>
+				<button class="temp-toggle up"></button><button class="temp-toggle down"></button>
+				<p class="unit-toggle"><a class="fahrenheit">F</a>/<a class="celsius">C</a></p>
+			</section>
+		</div>
+		<section class="garden">
+			<h2>Weather garden</h2>
+			<p class="garden-plot"></p>
+		</section>
+		<section class="upcoming-week">
+			<p>Weather this week</p>
+			<div class="daily-weather">
+				<img src="" alt="" class="icon">
+				<p>Tomorrow</p>
+				<p class="temperature"></p>
+			</div>
+			<div class="daily-weather">
+				<img src="" alt="" class="icon">
+				<p>The day after</p>
+				<p class="temperature"></p>
+			</div>
+			<div class="daily-weather">
+				<img src="" alt="" class="icon">
+				<p>Day after that</p>
+				<p class="temperature"></p>
+			</div>
+			<div class="daily-weather">
+				<img src="" alt="" class="icon">
+				<p>Next day</p>
+				<p class="temperature"></p>
+			</div>
+			<div class="daily-weather">
+				<img src="" alt="" class="icon">
+				<p>Following day</p>
+				<p class="temperature"></p>
+			</div>
+			<div class="daily-weather">
+				<img src="" alt="" class="icon">
+				<p>Six days from today</p>
+				<p class="temperature"></p>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
