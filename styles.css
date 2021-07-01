@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    silver,
+    rgba(200, 200, 205, 0.7),
+    rgba(120, 120, 150, 0.5)
+  );
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+h1 {
+  font-weight: 100;
+  font-size: 7rem;
+  margin: 0;
+}
+#container {
+  margin: 1vh 2.5vw;
+}
+.controls {
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url(./assets/seasons.jpg) no-repeat 0 0;
+  background-size: cover;
+}
+.control {
+  border: 1px solid #c9c9c9;
+  width: 30%;
+
+  border-radius: 5px;
+  margin: 0 2rem;
+  padding: 1rem;
+}
