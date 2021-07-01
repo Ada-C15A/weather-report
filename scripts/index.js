@@ -1,0 +1,58 @@
+let tempValue = 70;
+
+const updateTempStyles = (currentTemp) => {
+    const tempValueContainer = document.getElementById("tempValue");
+    let color = "teal";
+    if ( currentTemp >= 80) {
+        color = "red";
+    } else if (currentTemp >= 70) {
+        color = "orange";
+    } else if (currentTemp >= 60) {
+        color = "yellow";
+    } else if (currentTemp >= 50) {
+        color = "green";
+    }
+    tempValueContainer.classList = color;
+}
+
+const updateGarden = (currentTemp) => {
+    const landscapeContainer = document.getElementById("landscape");
+    let landscape = "🌲______⛄️🌲🌲🏂🏻🌲__🌲";
+    if ( currentTemp >= 80) {
+        landscape = "🧗🏾____🌵🌵🌵__🐍__🌵🌵";
+    } else if (currentTemp >= 70) {
+        landscape = "🌻🌻🌻__🌻🌻🌻_🌷__🌷🌷";
+    } else if (currentTemp >= 60) {
+        landscape = "💃🏿💃🏾💃🏽💃🏼💃🏻__🚴🏿_🚴🏾🚴🏽🚴🏼🚴🏻";
+    }
+    landscapeContainer.textContent = landscape;
+}
+
+const updateTemp = tempValue => {
+    const tempValueContainer = document.getElementById("tempValue");
+    tempValueContainer.textContent = tempValue;
+    updateTempStyles(tempValue);
+    updateGarden(tempValue);
+}
+
+const increaseTemp = () => {
+    tempValue += 1;
+    updateTemp(tempValue);
+};
+
+const decreaseTemp = () => {
+    tempValue -= 1;
+    updateTemp(tempValue);
+};
+
+const registerEventHandlers = () => {
+    updateTemp(tempValue);
+
+    const increaseTempControl = document.getElementById("increaseTempControl");
+    increaseTempControl.addEventListener("click", increaseTemp);
+    
+    const decreaseTempControl = document.getElementById("decreaseTempControl");
+    decreaseTempControl.addEventListener("click", decreaseTemp);
+};
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers);
