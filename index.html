@@ -1,53 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Weather Report</title>
-    <link href="styles/index.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <main>
-        <div id="parent"> 
-        <!-- 2 rows for all-->
-            <header>
-                <div id="headerTitle">
-                    <h1>Weather Report</h1>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Report</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+    <body>
+        <header class="header__header">
+            <h1>Weather Report</h1>
+            <span>For the lovely city of 
+                <span id="headerCityName" class="header__city-name">Seattle</span></span>
+        </header>
+        <section class="temperature__section">
+            <h2>Temperature</h2>
+            <div class="temperature__content">
+                <div class="temperature__controls">
+                    <span id="increaseTempControl">⬆️</span>
+                    <span id="decreaseTempControl">⬇️</span>
                 </div>
-                <div id="headerP">
-                    <p>"For the lovely city of ✨ some City✨ "</p>
-                </div>
-            </header>
-            <section id="interactiveContainer">
-            <!-- 2 columns -->
-                <section id="interactive">
-                <!-- 3 rows     -->
-                    <div class="card">
-                        <h3>Temperature</h3>
-                    </div>
-                    <div class="card">
-                        <h3>Sky</h3>
-                    </div>
-                    <div class="card">
-                        <h3>City Name</h3>
-                    </div>    
-                </section>
-                <section id="gardenAll">
-                <!-- 2 columns -->
-                    <h3 id="gardenTitle">Weather Garden</h3>
-                    <div id="gardenContainer">
-                    <!-- 2 rows -->
-                        <div id="gardenSky">
-                            ☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️
-                        </div>
-                        <div id="gardenbox">
-                            🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷
-                        </div>
-                    </div>
-                </section>        
-            </section>
-        </div>
-    </main>
-    <script src="scripts/index.js"></script>
-  </body>
+                <span id="tempValue" class="orange">72</span>
+            </div>
+        </section>
+        <section class="sky__section">
+            <h2>Sky</h2>
+            <select id="skySelect">
+                <option>Sunny</option>
+                <option>Cloudy</option>
+                <option>Rainy</option>
+                <option>Snowy</option>
+            </select>
+        </section>
+    
+        <section class="city-name__section">
+            <h2>City Name</h2>
+            <input type="text" id="cityNameInput" value="Seattle">
+            <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
+        </section>
+    
+        <section class="garden__section">
+            <h2>Weather Garden</h2>
+            <div id="gardenContent" class="garden__content sunny">
+                <div id="sky">☁️     ☁️   ☁️ ☀️ ☁️  ☁️</div>
+                <div id="landscape">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
+            </div>
+        </section>
+        <script src="scripts/index.js"></script>
+    </body>
 </html>
