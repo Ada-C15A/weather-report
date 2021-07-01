@@ -1,5 +1,15 @@
 @charset "UTF-8";
+:root {
+  --silver: rgb(190,190,190);
+  --mid-gray: rgb(200,200,205);
+  --darker-gray: rgb(120,120,150);
 
+  /* Translucents */
+  --super-light-grey-tr: rgba(255,255,255,0.2);
+  --silver-tr: rgba(190,190,190,0.5);
+  --mid-gray-tr: rgba(200,200,205,0.5);
+  --darker-gray-tr: rgba(120,120,150,0.5);
+}
 html,
 body {
   height: 100%;
@@ -7,9 +17,9 @@ body {
 body {
   font-family: "Roboto", sans-serif;
   background: linear-gradient(
-    silver,
-    rgba(200, 200, 205, 0.7),
-    rgba(120, 120, 150, 0.5)
+    var(--silver-tr),
+    var(--mid-gray-tr),
+    var(--darker-gray-tr)
   );
   margin: 0;
 }
@@ -26,21 +36,42 @@ h1 {
   margin: 0;
 }
 #container {
-  margin: 1vh 2.5vw;
+  height: 100%;
+  padding: 1vh 2.5vw;
+  background: linear-gradient(
+    var(--silver-tr),
+    var(--mid-gray-tr),
+    var(--darker-gray-tr)
+  );
+
 }
-.controls {
+.page-header {
+  text-align: center;
+}
+.controls, .days{
   display: flex;
   -ms-align-items: center;
-  align-items: center;
+  align-items:flex-start;
   justify-content: space-around;
-  background-image: url(./assets/seasons.jpg) no-repeat 0 0;
-  background-size: cover;
+  padding: 1rem;
 }
-.control {
-  border: 1px solid #c9c9c9;
+.controls {
+  background: url(assets/seasons.jpg) 0 32.5%;
+  /* 5%, 32.5%, 62.5%, 92.5 */
+}
+.control, .daily-weather {
+  border: 5px solid var(--super-light-grey-tr);
   width: 30%;
 
   border-radius: 5px;
   margin: 0 2rem;
   padding: 1rem;
+}
+.temperature {
+  font-size: 2em;
+  font-weight: bold;
+
+}
+.temperature.today {
+  font-size: 4em;
 }

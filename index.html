@@ -15,9 +15,9 @@
     <div id="container">
       <header class="page-header">
         <h1>Weather App</h1>
-      </header>
-      <div id="controls">
         <p>For the city of <span id="city">_</span></p>
+      </header>
+      <div class="controls">
         <section class="control">
           <h2>City</h2>
           <input type="text" />
@@ -38,8 +38,8 @@
         <section class="control">
           <h2>Temperature</h2>
           <p class="temperature today">64&deg;</p>
-          <button class="temp-toggle up">Raise</button
-          ><button class="temp-toggle down">Lower</button>
+          <button class="temp-toggle up">⬆️ Raise</button
+          ><button class="temp-toggle down">⬇️ Lower</button>
           <p class="unit-toggle">
             <a class="fahrenheit">F</a>/<a class="celsius">C</a>
           </p>
@@ -51,35 +51,37 @@
       </section>
       <section class="upcoming-week">
         <p>Weather this week</p>
-        <div class="daily-weather">
-          <img src="" alt="" class="icon" />
-          <p>Tomorrow</p>
-          <p class="temperature"></p>
-        </div>
-        <div class="daily-weather">
-          <img src="" alt="" class="icon" />
-          <p>The day after</p>
-          <p class="temperature"></p>
-        </div>
-        <div class="daily-weather">
-          <img src="" alt="" class="icon" />
-          <p>Day after that</p>
-          <p class="temperature"></p>
-        </div>
-        <div class="daily-weather">
-          <img src="" alt="" class="icon" />
-          <p>Next day</p>
-          <p class="temperature"></p>
-        </div>
-        <div class="daily-weather">
-          <img src="" alt="" class="icon" />
-          <p>Following day</p>
-          <p class="temperature"></p>
-        </div>
-        <div class="daily-weather">
-          <img src="" alt="" class="icon" />
-          <p>Six days from today</p>
-          <p class="temperature"></p>
+        <div class="days">
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>Tomorrow</p>
+            <p class="temperature"><p class="temperature">62&deg;</p></p>
+          </div>
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>The day after</p>
+            <p class="temperature"><p class="temperature">62&deg;</p></p>
+          </div>
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>Day after that</p>
+            <p class="temperature"><p class="temperature">62&deg;</p></p>
+          </div>
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>Next day</p>
+            <p class="temperature"><p class="temperature">62&deg;</p></p>
+          </div>
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>Following day</p>
+            <p class="temperature"><p class="temperature">62&deg;</p></p>
+          </div>
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>Six days from today</p>
+            <p class="temperature"><p class="temperature">62&deg;</p></p>
+          </div>
         </div>
       </section>
     </div>
