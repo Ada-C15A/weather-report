@@ -5,14 +5,21 @@
     <meta charset="UTF-8" />
     <title>Weather Report</title>
     <link href="styles/index.css" rel="stylesheet" />
-    <script src="scripts/index.js"></script>
 </head>
 <body>
     <div class="main-box">
-        <article id="key-box">
-            <button type="button" onclick="incrementValue() " value="0" id="up-arrow">⬆️</button>
-            <button type="button" onclick="decrementValue() " value="0" id="down-arrow">⬇️</button>
-            <input type="text" id="number" value="55" />
+        <article id="temp-box">
+            <h3>Temperature </h3>
+                <div class="temp-display">
+                    <div class="arrows">
+                        <span id="up">⬆️</span>
+                        <span id="down">⬇️</span>
+                    </div>
+                    <span id="number">55</span>
+                </div>
+            <!-- <button type="button" onclick="incrementValue() " id="up-arrow">⬆️</button>
+            <button type="button" onclick="decrementValue() " id="down-arrow">⬇️</button>
+            <input type="text" id="number" value="55" onchange="changeColor()" />  -->
         </article>
         <article id="landscape-box">
             <img src="assets/images/Spring-sunny.png" id="landscape" />
@@ -31,12 +38,13 @@
                     </select>
                 </form>
             </p> <br>
+
             <img src="" id="sky-type"/>
         </article>
-        
-        
-    
     </div>
+
+
+    <script src="scripts/index.js"></script>
     <footer>
 
     </footer>

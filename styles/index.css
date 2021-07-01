@@ -9,7 +9,7 @@
     background-color: green;
 }
 
-#key-box {
+#temp-box {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -22,7 +22,7 @@
     margin: 5px;
 }
 
-#up-arrow {
+#up {
     height: 150px;
     width: 150px;
     background-color: #eab676;
@@ -32,7 +32,7 @@
     
 }
 
-#down-arrow {
+#down {
     height: 150px;
     width: 150px;
     background-color: #76b5c5;
