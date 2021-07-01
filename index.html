@@ -22,24 +22,23 @@
             <input type="text" id="number" value="55" onchange="changeColor()" />  -->
         </article>
         <article id="landscape-box">
-            <img src="assets/images/Spring-sunny.png" id="landscape" />
+            <img src="assets/images/spring-rainy.png" id="landscape" />
             <p>City Name</p>
         </article>
         <article id="weather-box">
             <p>
                 <form>
                     Select your sky type:
-                    <select id="mySelect">
-                        <option value="sunny">Sunny</option>
-                        <option value="cloudy">Cloudy</option>
-                        <option value="rainy">Rainy</option>
-                        <option value="overcast">Overcast</option>
-                        <option value="snowy">Snowy</option>
-                    </select>
+                    <select id="mySelect" onchange="changeSky();">
+                        <option value="assets/images/sun.png">Sunny</option>
+                        <option value="assets/images/clouds.png">Cloudy</option>
+                        <option value="assets/images/rainy.png">Rainy</option>
+                        <option value="assets/images/sun-clouds.png">Overcast</option>
+                        <option value="assets/images/snow.png">Snowy</option>
+                        </select>
+                     <img src="assets/images/sunbrella.png" id="sky-type"/>
                 </form>
             </p> <br>
-
-            <img src="" id="sky-type"/>
         </article>
     </div>
 
