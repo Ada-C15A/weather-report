@@ -1,0 +1,57 @@
+body{
+    background-color: blue;
+}
+#parent{
+    background-color: transparent;
+    height: auto;
+    display: grid;
+    justify-content: space-between;    
+    grid-template-rows: 120px, 120px;
+}
+header{
+    color: white;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+#headerTitle{
+    padding-right: 1rem;
+}
+#interactiveContainer{
+    height: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+#interactive{
+    background-color: transparent;
+    height: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: repeat(3, 1fr);
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: space-between;
+    background:white;
+    border-radius: 8px;
+}
+#gardenAll{
+    color: white;
+    text-align: center;
+    height: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: repeat(2, 1fr);
+}
+#gardenTitle{
+    margin-top: 10rem;
+}
+#gardenContainer{
+    background-color: wheat;
+    height: auto;
+    width: auto;
+    border-radius: 8px;
+}
