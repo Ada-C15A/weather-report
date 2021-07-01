@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Weather Report</title>
+</head>
+
+<body>
+    <header>
+        <h1>Weather Report <span id="city"></span></h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Temperature</h2>
+                <div class="tempBox">
+                    <div>
+                        <p id="incrementTemp">⬆️</p>
+                        <p id="decrementTemp">⬇️</p>
+                    </div>
+                    <p id="temp"></p>
+                </div>
+            </article>
+            <article>
+                <h2>Sky</h2>
+                <select id="sky" name="sky">
+                    <option value="Sunny">Sunny</option>
+                    <option value="Cloudy">Cloudy</option>
+                    <option value="Rainy">Rainy</option>
+                    <option value="Snowy">Snowy</option>
+                </select>
+            </article>
+            <article>
+                <h2>City</h2>
+                <form id="cityForm" onSubmit="resetCity();return false;">
+                    <input type="text" id="cityInput" name="cityInput">
+                    <input type="submit" value="Reset">
+                </form>
+            </article>
+        </section>
+        <section class="garden">
+            <h2>Weather Garden</h2>
+            <article>
+                <div id="skyImg"></div>
+                <div id="landscapeImg"></div>
+            </article>
+        </section>
+    </main>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
