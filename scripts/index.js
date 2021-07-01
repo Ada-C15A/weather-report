@@ -54,7 +54,7 @@ const updateSky = () => {
         sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
         skyColor = "cloudy";
     } else if (inputSky === "Sunny") {
-        sky = "☁️   ☁️ ☁️  ☀️ ☁️   ☁️  ";
+        sky = "☁️   ☁️ ☁️  ☀️ ☁️   ☁️ ✈️ ";
         skyColor = "sunny";
     } else if (inputSky === "Rainy") {
         sky = "⛈🌧☁️☁️🌧🌧☁️🌧 🌦 🌧☁️☁️🌧";
@@ -68,6 +68,18 @@ const updateSky = () => {
     gardenContent.classList = `garden__content ${skyColor}`;
 };
 
+const updateCityName = () => {
+    const inputName = document.getElementById("cityNameInput").value;
+    const headerCityName = document.getElementById("headerCityName");
+    headerCityName.textContent = inputName;
+};
+
+const resetCityName = () => {
+    const cityNameInput = document.getElementById("cityNameInput");
+    cityNameInput.value = "Seattle";
+    updateCityName();
+};
+
 const registerEventHandlers = () => {
     updateTemp(tempValue);
     const increaseTempControl = document.getElementById("increaseTempControl");
@@ -79,6 +91,13 @@ const registerEventHandlers = () => {
     updateSky();
     const skySelect = document.getElementById("skySelect");
     skySelect.addEventListener("change", updateSky);
+
+    updateCityName();
+    const cityNameInput = document.getElementById("cityNameInput");
+    cityNameInput.addEventListener("input", updateCityName);
+
+    const cityNameResetBtn = document.getElementById("cityNameReset");
+    cityNameResetBtn.addEventListener("click", resetCityName);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
