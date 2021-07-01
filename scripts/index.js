@@ -21,7 +21,7 @@ const updateGarden = (currentTemp) => {
     if ( currentTemp >= 80) {
         landscape = "🧗🏾____🌵🌵🌵__🐍__🌵🌵";
     } else if (currentTemp >= 70) {
-        landscape = "🌻🌻🌻__🌻🌻🌻_🌷__🌷🌷";
+        landscape = "🌻🌻🌻__🌻🌻_🐿_🌷__🌷🌷";
     } else if (currentTemp >= 60) {
         landscape = "💃🏿💃🏾💃🏽💃🏼💃🏻__🚴🏿_🚴🏾🚴🏽🚴🏼🚴🏻";
     }
@@ -45,14 +45,40 @@ const decreaseTemp = () => {
     updateTemp(tempValue);
 };
 
+const updateSky = () => {
+    const inputSky = document.getElementById("skySelect").value;
+    const skyContainer = document.getElementById("sky");
+    let sky = "";
+    let skyColor = "";
+    if (inputSky === "Cloudy") {
+        sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+        skyColor = "cloudy";
+    } else if (inputSky === "Sunny") {
+        sky = "☁️   ☁️ ☁️  ☀️ ☁️   ☁️  ";
+        skyColor = "sunny";
+    } else if (inputSky === "Rainy") {
+        sky = "⛈🌧☁️☁️🌧🌧☁️🌧 🌦 🌧☁️☁️🌧";
+        skyColor = "rainy";
+    } else if (inputSky === "Snowy") {
+        sky = "​🌬​🌨​☁️☁️❄️☁️🌨❄️🌨☁️🌨🌨☁️";
+        skyColor = "snowy";
+    }
+    skyContainer.textContent = sky;
+    const gardenContent = document.getElementById("gardenContent");
+    gardenContent.classList = `garden__content ${skyColor}`;
+};
+
 const registerEventHandlers = () => {
     updateTemp(tempValue);
-
     const increaseTempControl = document.getElementById("increaseTempControl");
     increaseTempControl.addEventListener("click", increaseTemp);
     
     const decreaseTempControl = document.getElementById("decreaseTempControl");
     decreaseTempControl.addEventListener("click", decreaseTemp);
+
+    updateSky();
+    const skySelect = document.getElementById("skySelect");
+    skySelect.addEventListener("change", updateSky);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);

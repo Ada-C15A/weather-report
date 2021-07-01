@@ -136,17 +136,17 @@ h2 {
   }
   
   .cloudy {
-    background-color: lightgrey;
+    background-color: rgba(137, 136, 161, 0.654);
   }
   
   .sunny {
-    background-color: rgb(221, 255, 255);
+    background-color: rgb(99, 195, 247);
   }
   
   .rainy {
-    background-color: lightblue;
+    background-color: rgb(155, 199, 247);
   }
   
   .snowy {
-    background-color: lightsteelblue;
+    background-color: rgb(177, 206, 245);
   }
