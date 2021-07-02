@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="./styles/index.css">
     <title>Weather App</title>
 </head>
-<body class="mainBackground">
+<body id="mainBackground">
     <div class="mainContent">
         <div class="headerContainer">
             <h1 class="weatherHeader">Weather Report</h1>
             <h1 class="weatherHeader"> <span id="cityName" >Antioch, CA</span> <span id="tempDisplay">70F°</span></h1>
+        </div>
+        <div id="skyContainer">
+            <span id="skyContent">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</span>
         </div>
         <div id="landscapeContainer">
             <span id="lanscapeContent">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</span>
@@ -22,7 +25,7 @@
                 <button id="tempUp" class="tempUp tempButton">⬆</button>
                 <button id="tempDown" class="tempDown tempButton">⬇</button>
             </div>
-            <div class="skyContainer">
+            <div class="selectSky">
                 <label for="sky">Sky:</label>
                 <select id="sky" name="sky">
                     <option value="sunny">Sunny</option>

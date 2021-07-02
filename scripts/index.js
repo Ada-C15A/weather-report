@@ -1,16 +1,17 @@
 const state = {
-    temperature: 70
+    temperature: 70,
+    sky: "sunny"
 }
 
 weather_info = {
     cool: {
-        fontColor: "#8cd1ec",
+        fontColor: "#57b3b5",
         color: "#8cd1ec",
         emojis: "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃",
         temp: [69,60]
     },
     warm: {
-        fontColor: "#e5b366",
+        fontColor: "#d19419",
         color: "FFE1B4",
         emojis: "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷",
         temp: [79,70]
@@ -73,7 +74,6 @@ const changeLandscape = () => {
     }else if(state.temperature < 59){
         landscapeContainer.style.color = weather_info.freezing.color
         lanscapeContent.textContent = `${weather_info.freezing.emojis}`;
-
     }
 }
 
@@ -98,11 +98,38 @@ const increaseTemp = (event) => {
     changeLandscape()
 };
 
+const changeSky = (event) => {
+    const skyContent = document.querySelector("#skyContent");
+    const mainBackground = document.querySelector("#mainBackground");
+    const mainContent = document.querySelector(".mainContent");
+
+    if(event.target.options.selectedIndex == 0){
+        mainContent.style.backgroundColor = "#c9c9c3"
+        mainBackground.style.backgroundImage = `url(${sky_info.sunny})`
+        skyContent.textContent = `☁️ ☁️ ☁️ ☀️ ☁️ ☁️`;
+    }else if(event.target.options.selectedIndex == 1){
+        mainContent.style.backgroundColor = "#cadeed"
+        mainBackground.style.backgroundImage = `url(${sky_info.cloudy})`
+        skyContent.textContent = `☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️`;
+    }else if(event.target.options.selectedIndex == 2){
+        mainContent.style.backgroundColor = "#b7f6f7"
+        mainBackground.style.backgroundImage = `url(${sky_info.rainy})`
+        skyContent.textContent = `🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧`;
+    }else if(event.target.options.selectedIndex == 3){
+        mainContent.style.backgroundColor = "#e3e2de"
+        mainBackground.style.backgroundImage = `url(${sky_info.snowy})`
+        skyContent.textContent = `🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨`;
+    }
+}
+
 const registerEventHandlers = (event) => {
     const tempDownButton = document.querySelector("#tempDown");
     tempDownButton.addEventListener("click", decreaseTemp);
     const tempUpButton = document.querySelector("#tempUp");
     tempUpButton.addEventListener("click", increaseTemp);
+    const skySelect = document.querySelector("#sky");
+    skySelect.addEventListener("change", changeSky);
+
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
