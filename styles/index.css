@@ -1,0 +1,15 @@
+.cloudy {
+    background-color: lightgrey;
+  }
+
+  .sunny {
+    background-color: rgb(221, 255, 255);
+  }
+
+  .rainy {
+    background-color: lightblue;
+  }
+
+  .snowy {
+    background-color: lightsteelblue;
+  }
