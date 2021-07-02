@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
-        <h1>Weather Report</h1>
+        <h1 class="title">Weather Report</h1>
+        <p class=cityNameDisplay>For the lovely city of San Francisco`</p>
         <section class="weatherInput">
             <div class="temperatureDisplay"></div>
                 <h2>Temperature</h2>
@@ -19,7 +20,7 @@
             <div class="sky">
                 <h2>Sky</h2>
                 <label for="weather">Choose a weather</label>
-                    <select name="weather" id="weather">
+                    <select name="weather" id="skyweather">
                         <option value="Sunny">Sunny</option>
                         <option value="Cloudy">Cloudy</option>
                         <option value="Rainy">Rainy</option>
@@ -28,7 +29,7 @@
             </div>
             <div class="city">
                 <h2>City</h2>
-                <form>
+                <form class="form">
                     <input type="text" id="cityName">
                     <input type="submit" value="Submit">
                     <input type="reset" value="Reset">
@@ -36,7 +37,10 @@
             </div>
         </section>
         <section class="weatherDisplay">
-            <p class="weatherDay"></p>
+            <p class="todayWeather">Today's Weather</p>
+            <div class=skyIcon>☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+            <img class=todayDisplay>
+            <p class=landScape></p>
         </section>
            <script src="scripts/index.js"></script>
     </body>
