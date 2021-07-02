@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> Weather Report </title>
+    <link rel="stylesheet" href="styles/index.css">
+<body>
+    <div class="center-wrap bg">
+        <header class="header header-box">
+            <h1>Weather Report</h1>
+            <span>Welcome to the city of 
+                <span id="header-city">
+                    San Francisco
+                </span>
+            </span>
+        </header>
+        <br>
+        <div class="weather-box center-wrap">
+            <h2>Weather Garden</h2>
+            <div id="weatherContent" class="weather-content">
+                <div id="sky">☁️     ☁️   ☁️ ☀️ ☁️  ☁️</div>
+                <br>
+                <br>
+                <br>
+                <div id="landscape">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
+            </div>
+        </div>
+        <br>
+        <div class="weather-adjustments">
+            <div class="box">
+                <h2>Temperature</h2>
+                <span class="box-display">
+                    <p> <a id="temp" class="orange">75</a> °</p>
+                </span>
+                <button type="button" onClick="onIncreaseClick()" id="increase">⬆️</button>
+                <button type="button" onClick="onDecreaseClick()" id="decrease">⬇️</button>
+            </div>
+            <div class="box">
+                <h2>Sky</h2>
+                <br>
+                <span class="box-display">
+                    <select class="skySelect" id="skyChoice">
+                        <option value="">Select Sky:</option>
+                        <option value="Sunny">Sunny</option>
+                        <option value="Cloudy">Cloudy</option>
+                        <option value="Rainy">Rainy</option>
+                        <option value="Snowy">Snowy</option>
+                    </select>
+                </span>
+            </div>
+            <div class="box">
+                <h2>City</h2>
+                <br>
+                <input type="text" id="city" value="San Francisco">
+                <button>Update</button>
+                <button>Reset</button>
+            </div>
+
+        </div>
+
+        <br>
+        <footer>
+            <div>Copywrited Weather Reporter 2021 </div>
+        </footer>
+    </div>
+<script src="scripts/index.js"></script>    
+</body>
+</html>
