@@ -1,5 +1,10 @@
 
 
-const increaseTemp = () => [
-  
-]
+const increaseTemp = () => {
+
+}
+
+const decreaseTemp = () => {
+
+}
+
