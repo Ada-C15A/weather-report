@@ -2,3 +2,55 @@
     position: relative;
     text-align: center;
 }
+
+.weather-box {
+    height: 200px;
+    width: 50%;
+    background-color: rgb(196, 220, 248);
+    color: #fff;
+    padding: 10px;
+    border: solid 3px black;
+    margin: auto;
+}
+
+.weather-adjustments{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border: solid 3px black;
+    margin: auto;
+    flex-basis: auto;
+    flex: none;
+    align-self: auto;
+}
+
+.temp-display {
+    position: relative;
+    text-align:center;
+    font-size: 2em;
+    font-weight: bold;
+}
+.red {
+    color: red;
+}
+.orange {
+    color: orange;
+}
+.yellow {
+    color: gold;
+}
+.green {
+    color: green;
+}
+.blue {
+    color: rgb(71, 15, 228);
+}
