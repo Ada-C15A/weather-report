@@ -19,11 +19,11 @@
 // }
 
 const state = {
-    temperature: 55
+    temperature: 55,
+    // name: "Seattle"
 };
 
 const tempIncrease = (event) => {
-    console.log({ state });
     state.temperature += 1; 
     const tempDisplay = document.querySelector("#number");
     const photo = document.querySelector("#landscape");
@@ -58,13 +58,23 @@ const tempDecrease = (event) => {
         photo.src="assets/images/very-snowy-city.png";
     }
 };
-
+// change sky image 
 function changeSky() {
     const sky = document.querySelector("#sky-type");
     var img = document.getElementById("mySelect");
     var value = img.options[img.selectedIndex].value;
     sky.src=value;
 }
+/* Change city name */
+const input = document.querySelector('input');
+const log = document.getElementById('log');
+
+input.addEventListener('change', updateValue);
+
+function updateValue(e) {
+    log.textContent = e.target.value;
+}
+
 const registerEventHandlers = (event) => {
     const upArrow = document.querySelector("#up");
     upArrow.addEventListener("click", tempIncrease);
