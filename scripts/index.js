@@ -44,6 +44,12 @@ const updateSky = () => {
     gardenContent.classList = `garden__content ${skyColor}`;
 }
 
+const updateCityName = () => {
+    const inputName = document.getElementById("cityNameInput").value;
+    const headerCityName = document.getElementById("headerCityName");
+    headerCityName.textContent = inputName;
+}
+
 const registerEventHandlers = (event) => {
     const increaseTemp = document.querySelector("#increaseTemperature");
     increaseTemp.addEventListener("click", increaseTemperature);
@@ -54,6 +60,10 @@ const registerEventHandlers = (event) => {
     updateSky();
     const skySelect = document.getElementById("skySelect");
     skySelect.addEventListener("change", updateSky);
+
+    updateCityName();
+    const cityNameInput = document.getElementById("cityNameInput");
+    cityNameInput.addEventListener("input", updateCityName)
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
