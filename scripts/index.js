@@ -9,7 +9,8 @@ const increaseTemperature = () => {
     temperature.innerHTML = state.temperature;
 
     const temperatureCount = document.querySelector("#temperature");
-    temperatureCount.textContent = state.temperature;
+    temperatureCount.textContent = `${state.temperature}º`;
+    updateGarden();
 }
 
 const decreaseTemperature = () => {
@@ -18,7 +19,8 @@ const decreaseTemperature = () => {
     temperature.innerHTML = state.temperature;
 
     const temperatureCount = document.querySelector("#temperature");
-    temperatureCount.textContent = state.temperature;
+    temperatureCount.textContent = `${state.temperature}º`;
+    updateGarden();
 }
 
 const updateSky = () => {
@@ -44,6 +46,20 @@ const updateSky = () => {
     gardenContent.classList = `garden__content ${skyColor}`;
 }
 
+const updateGarden = () => {
+    const currentTemp = state.temperature;
+    const landscapeContainer = document.getElementById("landscape");
+    let landscape = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+    if (currentTemp >= 80) {
+        landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+    } else if (currentTemp >= 70) {
+        landscape = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+    } else if (currentTemp >= 60) {
+        landscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+    }
+    landscapeContainer.textContent = landscape;
+}
+
 const updateCityName = () => {
     const inputName = document.getElementById("cityNameInput").value;
     const headerCityName = document.getElementById("headerCityName");
@@ -57,6 +73,7 @@ const resetCityName = () => {
 }
 
 const registerEventHandlers = (event) => {
+    updateGarden();
     const increaseTemp = document.querySelector("#increaseTemperature");
     increaseTemp.addEventListener("click", increaseTemperature);
 
