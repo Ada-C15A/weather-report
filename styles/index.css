@@ -1,13 +1,231 @@
+:root {
+    --bg_main: #0a1f44;
+    --text_light: #fff;
+    --text_med: #53627c;
+    --text_dark: #1e2432;
+    --pale_yellow: #E3DA83;
+    --darkblue: #c3112d;
+    --orange: #ff8c00;
+}
+
+/* move colors here */
+.color0 {
+    color:#fff;
+}
+.color1 {
+    color: rgb(2, 59, 229);
+}
+.color2 {
+    color: rgb(11, 129, 232);
+}
+.color3 {
+    color: rgb(28, 172, 163);
+}
+.color4 {
+    color: rgb(52, 224, 0);
+}
+.color5 {
+    color: rgb(229, 223, 0);
+}
+.color6 {
+    color: rgb(230, 183, 0);
+}
+.color7 {
+    color: rgb(231, 138, 0);
+}
+.color8 {
+    color: rgb(231, 70, 0);
+}
+.color9 {
+    color: rgb(205, 84, 201)
+}
+.color10 {
+    color: rgb(231, 35, 0)
+}
+
 *, :after, :before {
-    box-sizing: border-box;
+    box-sizing: content-box;
     margin:0;
     padding:0;
 }
 
 body {
     height: 100vh;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif!important;
     font-size: 18px;
+    line-height: 1.5;
     font-weight: 300;
+    color: rgb(255	255	255);
     background: linear-gradient(rgb(180, 188, 219), rgb(231, 212, 214));
+    overflow: hidden;
 }
+
+main {
+    overflow: scroll;
+    height: 100vh;
+}
+
+html {
+    height: 100vh;
+}
+
+button, input, select, textarea, optgroup {
+    font: inherit;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.wrapper {
+    max-width: 100%;
+}
+
+.weather-app {
+    padding: 25px 67px;
+}
+
+.shadow {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    max-width: 372px;
+    padding: 50px;
+    margin: 0 auto;
+}
+.shadow .container {
+    font-size: 65px;
+    position: relative;
+}
+
+.shadow #counting {
+    font-size: 85px;
+}
+
+button {
+    cursor: pointer;
+}
+input {
+    -webkit-appearance: none;
+}
+    
+button,
+input {
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+#couting {
+    font-size: 85px;
+}
+
+#sky-select {
+    color: rgb(113, 125, 141);
+    border-color: rgb(113, 125, 141);
+}
+
+.btn-increment .btn-decrement {
+    padding-left: 21px;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    text-align: center;
+}
+
+.temperature--degree {
+    font-size: 85px;
+}
+
+.top-banner {
+    color: var(--text_light);
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.02em;
+    padding: 0 0 30px 0;
+}
+
+.city---name {
+    font-size: 35px;
+}
+
+.top-banner form {
+    position: relative;
+}
+
+.top-banner form input {
+    font-size: 2rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+    border-bottom: 1px solid;
+}
+
+.top-banner form input::placeholder {
+    color: currentColor; 
+}
+
+.top-banner form button {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 15px 20px;
+    margin-left: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: var(--text_med);
+    transition: background 0.3s ease-in-out;
+}
+
+.top-banner form button:hover {
+    background: var(--pale_yellow);
+}
+
+.top-banner form .msg {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    max-width: 450px;
+    min-height: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    .top-banner form {
+        flex-direction: column;
+    }
+
+    .top-banner form input,
+    .top-banner form button {
+    width: 100%;
+    }
+
+    .top-banner form button {
+        margin: 20px 0 0 0;
+    }
+
+    .top-banner form .msg {
+        position: static;
+        max-width: none;
+        min-height: 0;
+        margin-top: 10px;
+    }
+}
+
