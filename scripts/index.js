@@ -50,6 +50,12 @@ const updateCityName = () => {
     headerCityName.textContent = inputName;
 }
 
+const resetCityName = () => {
+    const cityNameInput = document.getElementById('cityNameInput');
+    cityNameInput.value = "Phoenix";
+    updateCityName();
+}
+
 const registerEventHandlers = (event) => {
     const increaseTemp = document.querySelector("#increaseTemperature");
     increaseTemp.addEventListener("click", increaseTemperature);
@@ -64,6 +70,9 @@ const registerEventHandlers = (event) => {
     updateCityName();
     const cityNameInput = document.getElementById("cityNameInput");
     cityNameInput.addEventListener("input", updateCityName)
+
+    const cityNameResetBtn = document.getElementById("cityNameReset");
+    cityNameResetBtn.addEventListener("click", resetCityName);
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
