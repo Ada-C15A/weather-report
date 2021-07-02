@@ -20,3 +20,14 @@
 #tempValue, #tempDisplay {
     color: #d19419;
 }
+
+.controlsContainer,  .floatContainer{
+    display: flex;
+}
+.controlsContainer > div, floatContainer > div{
+    flex: 1; /*grow*/
+}
+
+.weatherContent{
+    margin-left: 500px;
+}
