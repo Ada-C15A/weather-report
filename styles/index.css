@@ -1,0 +1,33 @@
+#mainBackground {
+    background-image: url("https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80");
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainContent {
+    margin: auto;
+    margin-top: 250px;
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    background-color: #c9c9c3;
+}
+#tempValue, #tempDisplay {
+    color: #d19419;
+}
+
+.controlsContainer,  .floatContainer{
+    display: flex;
+}
+.controlsContainer > div, floatContainer > div{
+    flex: 1; /*grow*/
+}
+
+.weatherContent{
+    margin-left: 500px;
+}

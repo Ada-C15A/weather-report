@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Weather App</title>
+</head>
+<body id="mainBackground">
+    <div class="mainContent">
+        <div class="floatContainer">
+            <div class="headerContainer">
+                <h1 class="weatherHeader">Weather Report</h1>
+                <h1 class="weatherHeader"> <span id="cityName" >Antioch, CA</span> <span id="tempDisplay">70F°</span></h1>
+            </div>
+            <div class="weatherContent">
+                <div id="skyContainer">
+                    <span id="skyContent">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</span>
+                </div>
+                <div id="landscapeContainer">
+                    <span id="lanscapeContent">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</span>
+                </div>
+            </div>
+        </div>
+        <div class="controlsContainer">
+            <div class="tempContainer one">
+                <p id="tempValue">Temperature: 70F°</p>
+                <button id="tempUp" class="tempUp tempButton">⬆</button>
+                <button id="tempDown" class="tempDown tempButton">⬇</button>
+            </div>
+            <div class="selectSky two">
+                <label for="sky">Sky:</label>
+                <select id="sky" name="sky">
+                    <option value="sunny">Sunny</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="snowy">Snowy</option>
+                </select>
+            </div>
+            <div class="cityContainer three">
+                <label for="cityName">City:</label>
+                <input type="text" id="cityNameSelect" name="cityName">
+                <button id="resetButton">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
