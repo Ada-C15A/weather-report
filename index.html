@@ -14,23 +14,33 @@
 <body>
   <header>
     <h1>Weather Report</h1>
-    <h3>For the lovely city of</h3>
+    <span>For the lovely city of<span>
   </header>
-  <section>
-    <!-- this will need to be in a class -->
+  <section class="allTemperature">
     <h2>Temperature</h2> 
-    <!-- btns for increase and decrease will live here -->
+    <div class="temperatureSection">
+      <div class="temperatureSectionBtns"></div>
+        <span id="increaseTempBtn">⬆️</span>
+        <span id="decreaseTempBtn">⬇️</span>
+      </div>
+      <span id="tempStart">71</span>
+    </div>
   </section>
 
     <section>
     <!-- this will need to be in a class -->
     <h2>Sky</h2>
-    <!-- option for sunny/cloudy/rainy/snowy -->
+    <!-- this is in a drop down -->
+    <option>SUNSHINE</option>
+    <option>CLOUDS</option>
+    <option>RAIN</option>
+    <option>RAIN</option>
   </section>
 
   <section>
     <!-- this will need to be in a class -->
     <h2>City Name</h2>
+    <button id="resetBtn">RESET</button>
     <!-- text box city, reset btn, default val? -->
   </section>
 
