@@ -1,5 +1,5 @@
 const state = {
-    temperature: 1,
+    temperature: 80,
     sky: "sunny",
 }
 
