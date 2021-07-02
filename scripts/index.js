@@ -1,7 +1,7 @@
 const state = {
     temperature: 70,
     sky: "sunny",
-    cityName: "Antioch"
+    cityName: "Antioch, CA"
 }
 
 weather_info = {
@@ -126,7 +126,15 @@ const changeSky = (event) => {
 const changeCityName = (event) => {
     state.cityName = event.target.value
     const cityName = document.querySelector("#cityName");
-    cityName.textContent = `${state.cityName }`;
+    cityName.textContent = state.cityName;
+}
+
+const clearCityName = () => {
+    state.cityName = "Antioch, CA"
+    const cityName = document.querySelector("#cityName");
+    cityName.textContent = state.cityName;
+    const cityNameSelect = document.querySelector("#cityNameSelect");
+    cityNameSelect.value = ""
 }
 
 const registerEventHandlers = (event) => {
@@ -138,6 +146,8 @@ const registerEventHandlers = (event) => {
     skySelect.addEventListener("change", changeSky);
     const renameCity = document.querySelector("#cityNameSelect");
     renameCity.addEventListener("input", changeCityName);
+    const resetCityName = document.querySelector("#resetButton");
+    resetCityName.addEventListener("click", clearCityName);
 
 };
 
