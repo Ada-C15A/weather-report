@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Weather Report">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <title>Weather</title>
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    <body>
+        <h1 class="title">Weather Report</h1>
+        <p class=cityNameDisplay>For the lovely city of San Francisco`</p>
+        <section class="weatherInput">
+            <div class="temperatureDisplay"></div>
+                <h2>Temperature</h2>
+                <button class="upClick"><i class="far fa-hand-point-up"></i></button>
+                <button class="downClick"><i class="far fa-hand-point-down"></i></button>
+                <p class="temperature">70</p>
+            <div class="sky">
+                <h2>Sky</h2>
+                <label for="weather">Choose a weather</label>
+                    <select name="weather" id="skyweather">
+                        <option value="Sunny">Sunny</option>
+                        <option value="Cloudy">Cloudy</option>
+                        <option value="Rainy">Rainy</option>
+                        <option value="Snowy">Snowy</option>
+                    </select>
+            </div>
+            <div class="city">
+                <h2>City</h2>
+                <form class="form">
+                    <input type="text" id="cityName">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </form>
+            </div>
+        </section>
+        <section class="weatherDisplay">
+            <p class="todayWeather">Today's Weather</p>
+            <div class=skyIcon>☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+            <img class=todayDisplay>
+            <p class=landScape></p>
+        </section>
+           <script src="scripts/index.js"></script>
+    </body>
+</html>
