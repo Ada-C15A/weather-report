@@ -1,6 +1,7 @@
 const state = {
     temperature: 70,
-    sky: "sunny"
+    sky: "sunny",
+    cityName: "Antioch"
 }
 
 weather_info = {
@@ -122,6 +123,12 @@ const changeSky = (event) => {
     }
 }
 
+const changeCityName = (event) => {
+    state.cityName = event.target.value
+    const cityName = document.querySelector("#cityName");
+    cityName.textContent = `${state.cityName }`;
+}
+
 const registerEventHandlers = (event) => {
     const tempDownButton = document.querySelector("#tempDown");
     tempDownButton.addEventListener("click", decreaseTemp);
@@ -129,6 +136,8 @@ const registerEventHandlers = (event) => {
     tempUpButton.addEventListener("click", increaseTemp);
     const skySelect = document.querySelector("#sky");
     skySelect.addEventListener("change", changeSky);
+    const renameCity = document.querySelector("#cityNameSelect");
+    renameCity.addEventListener("input", changeCityName);
 
 };
 
