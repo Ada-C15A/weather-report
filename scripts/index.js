@@ -41,7 +41,6 @@ const updateSky = () => {
     }
     skyContainer.textContent = sky;
     const gardenContent = document.getElementById("gardenContent");
-    console.log({skyColor})
     gardenContent.classList = `garden__content ${skyColor}`;
 }
 
