@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,13 +6,58 @@
         <title>Weather Report</title>
         <link rel="stylesheet" href="./styles/index.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
     </head>
     <body class="wrapper">
-        <h1>Weather app</h1>
-        <script type="text/javascript" src="./scripts/index.js"></script>
+        <main>
+        <h1 class="weather-app">Weather app</h1>
+        <div class="shadow">
+        <section class="weather-container">
+            <div class="temperature">
+                <div class="degree-section">
+                    <div class="container">
+                        <button id="btn-increment" class="btn-increment">+</button>
+                        <button id="btn-decrement" class="btn-decrement">-</button>
+                        <h2 class="counter-number" id="counting">100</h2>
+                    </div>
+                    <h3 class="city--name"><span id="result"></span></h3>
+                    <canvas id="icon" width="128" height="128"></canvas>
+                </div>
+            </div>
 
-        <section class="temperature">
-            <h2 class="temperature--degree">100</h2>
+            <section class="sky-btn">
+                <h2 class="sky--name">Sky</h2>
+                <select id="sky-select">
+                    <option>Rainy</option>
+                    <option>Cloudy</option>
+                    <option>Sunny</option>
+                    <option>Winter</option>
+                    <option>Clear Night</option>
+                    <option>Windy</option>
+                </select>
+            </section>
+
+            <section class="city top-banner">
+                <div class="container">
+                    <form>
+                        <input type="text" value="" autocomplete="off" id="city-name" autofocus>
+                        <button id="resetBtn" type="reset">Reset</button>
+                        <!-- <button class="submitBtn" type="button" onclick="changeCity()">submit</button> -->
+                        <span class="msg"></span>
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <div class="location">
+                    <h1 class="location-timezone"></h1>
+                </div>
+            </section>
+
         </section>
+        </div>
+        </main>
+        <script src="./scripts/skycons.js"></script>
+        <script src="./scripts/index.js"></script>
     </body>
 </html>
