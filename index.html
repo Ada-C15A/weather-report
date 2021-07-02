@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Weather App</title>
+</head>
+<body class="mainBackground">
+    <div class="mainContent">
+        <div class="headerContainer">
+            <h1 class="weatherHeader">Weather Report</h1>
+            <h1 class="weatherHeader"> <span id="cityName" >Antioch, CA</span> <span id="tempDisplay">70</span></h1>
+        </div>
+        <div class="landscapeContainer">
+            <span class="lanscapeContent"></span>
+        </div>
+        <div class="controlsContainer">
+            <div class="tempContainer">
+                <p>Temperature:</p>
+                <span id="tempUp" class="tempButton">⬆</span>
+                <span id="tempDown" class="tempButton">⬇</span>
+            </div>
+            <div class="skyContainer">
+                <label for="sky">Sky:</label>
+                <select id="sky" name="sky">
+                    <option value="sunny">Sunny</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="snowy">Snowy</option>
+                </select>
+            </div>
+            <div class="cityContainer">
+                <label for="cityName">City:</label>
+                <input type="text" id="cityName" name="cityName">
+                <button id="resetButton">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
