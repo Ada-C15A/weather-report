@@ -69,10 +69,15 @@ function changeSky() {
 const input = document.querySelector('input');
 const log = document.getElementById('log');
 
-input.addEventListener('change', updateValue);
+input.addEventListener("change", updateValue);
 
 function updateValue(e) {
     log.textContent = e.target.value;
+};
+const clearCityName = () => {
+    const input = document.querySelector('input');
+    input.value = "Seattle";
+    updateValue();
 }
 
 const registerEventHandlers = (event) => {
