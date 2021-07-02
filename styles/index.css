@@ -1,3 +1,10 @@
+.bg {
+    background-image: url("https://i.redd.it/v7s5trrgarn31.jpg");
+    /* background-color: rgb(202, 156, 245); */
+    background-size: contain;
+    background-size: cover;
+    
+}
 .center-wrap { 
     position: relative;
     text-align: center;
@@ -20,6 +27,17 @@
     justify-content: center;
     align-content: center;
 }
+.header-box {
+    height: 120px;
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: auto;
+    flex-basis: auto;
+    flex: none;
+    align-self: auto;
+    opacity: 0.6;
+}
 
 .box {
     height: 200px;
@@ -33,7 +51,7 @@
     align-self: auto;
 }
 
-.temp-display {
+.box-display {
     position: relative;
     text-align:center;
     font-size: 2em;
@@ -53,4 +71,24 @@
 }
 .blue {
     color: rgb(71, 15, 228);
+}
+
+/* 
+Sky box */
+.skySelect {
+    width:100%;
+    position: relative;
+    font-family: Arial;
+    background-color: DodgerBlue;
+    color: white;
+    outline: none;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    line-height: 1.1;
+    font-size: 1.25rem;
+}
+
+.skySelect select {
+    display: none;
 }

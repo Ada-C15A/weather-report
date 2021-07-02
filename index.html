@@ -5,8 +5,8 @@
     <title> Weather Report </title>
     <link rel="stylesheet" href="styles/index.css">
 <body>
-    <div class="center-wrap">
-        <header class="header">
+    <div class="center-wrap bg">
+        <header class="header header-box">
             <h1>Weather Report</h1>
             <span>Welcome to the city of 
                 <span id="header-city">
@@ -15,9 +15,9 @@
             </span>
         </header>
         <br>
-        <div class="weather-garden weather-box center-wrap">
+        <div class="weather-box center-wrap">
             <h2>Weather Garden</h2>
-            <div id="gardenContent" class="garden-content sunny">
+            <div id="weatherContent" class="weather-content">
                 <div id="sky">☁️     ☁️   ☁️ ☀️ ☁️  ☁️</div>
                 <br>
                 <br>
@@ -27,19 +27,32 @@
         </div>
         <br>
         <div class="weather-adjustments">
-            <div class="temperature box">
+            <div class="box">
                 <h2>Temperature</h2>
-                <span class="temp-display">
+                <span class="box-display">
                     <p> <a id="temp" class="orange">75</a> °</p>
                 </span>
-                <button type="button" onClick="onIncreaseClick()">⬆️</button>
-                <button type="button" onClick="onDecreaseClick()">⬇️</button>
+                <button type="button" onClick="onIncreaseClick()" id="increase">⬆️</button>
+                <button type="button" onClick="onDecreaseClick()" id="decrease">⬇️</button>
             </div>
-            <div class="sky box">
+            <div class="box">
                 <h2>Sky</h2>
+                <br>
+                <span class="box-display">
+                    <select class="skySelect" id="skyChoice">
+                        <!-- <option value="0">Select Sky:</option> -->
+                        <option>Sunny</option>
+                        <option>Cloudy</option>
+                        <option>Rainy</option>
+                        <option>Snowy</option>
+                    </select>
+                </span>
             </div>
-            <div class="city-name box">
+            <div class="box">
                 <h2>City</h2>
+                <br>
+                <input type="text" id="city" value="San Francisco">
+                <button>Update</button>
             </div>
 
         </div>

@@ -48,3 +48,36 @@ const onDecreaseClick = () => {
     document.getElementById("temp").innerHTML = temp;
     updateTemp(temp);
 };
+
+const updateSky = () => {
+    const skyChoice = document.getElementById("skyChoice").value;
+    const skyVal = document.getElementById("sky");
+
+    if (skyChoice === "Sunny") {
+        sky = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+        
+    } else if (skyChoice === "Cloudy") {
+        sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+        
+    } else if (skyChoice === "Rainy") {
+        sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+        
+    } else if (skyChoice === "Snowy") {
+        sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+        
+    }
+    skyVal.textContent = sky;
+}
+
+const registerEventHandlers = () => {
+    updateTemp(temp);
+    const onIncreaseClick = document.getElementById("increase");
+    onIncreaseClick.addEventListener("click", increaseTemp);
+    const onDecreaseClick = document.getElementById("decrease");
+    onDecreaseClick.addEventListener("click", decreaseTemp);
+    updateSky();
+    const skySelect = document.querySelector("sky");
+    skySelect.addEventListener("change", updateSky);
+};
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers);
