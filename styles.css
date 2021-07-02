@@ -3,6 +3,8 @@
   --silver: rgb(190,190,190);
   --mid-gray: rgb(200,200,205);
   --darker-gray: rgb(120,120,150);
+  --dark-gray: rgb(53, 53, 53);
+  --light-gray-blue: rgb(54, 108, 190);
 
   /* Translucents */
   --super-light-grey-tr: rgba(255,255,255,0.2);
@@ -23,16 +25,24 @@ body {
   );
   margin: 0;
 }
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+	text-shadow:
+		1px 1px 0 var(--silver),
+		-1px 1px 0 var(--silver),
+		1px -1px 0 var(--silver),
+		-1px -1px 0 var(--silver);
+	letter-spacing: 5px;
 }
 h1 {
+  background: -webkit-linear-gradient(var(--light-gray-blue), var(--dark-gray));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 100;
-  font-size: 7rem;
+  font-size: 15vw;
   margin: 0;
 }
 #container {
@@ -49,10 +59,6 @@ h1 {
   text-align: center;
 }
 .controls, .days{
-  display: flex;
-  -ms-align-items: center;
-  align-items:flex-start;
-  justify-content: space-around;
   padding: 1rem;
 }
 .controls {
@@ -60,12 +66,20 @@ h1 {
   /* 5%, 32.5%, 62.5%, 92.5 */
 }
 .control, .daily-weather {
+  background-color: var(--silver-tr);
   border: 5px solid var(--super-light-grey-tr);
   width: 30%;
 
   border-radius: 5px;
   margin: 0 2rem;
   padding: 1rem;
+}
+.unit-toggle {
+  font-size: .5em;
+  font-weight: normal;
+}
+.unit-toggle a {
+  color: var(--mid-gray);
 }
 .temperature {
   font-size: 2em;
@@ -74,4 +88,21 @@ h1 {
 }
 .temperature.today {
   font-size: 4em;
+}
+
+@media (min-width:400px) {
+
+  .controls, .days {
+    display: flex;
+    -ms-align-items: center;
+    align-items:stretch;
+    justify-content: space-around;
+      
+  }
+}
+
+@media (min-width:660px) {
+  h1 {
+    font-size: 7rem;
+  }
 }
