@@ -19,17 +19,16 @@ const updateTempColor = (tempNum) => {
 const updateLandscape = (tempNum) => {
     const landscapeView = document.getElementById("landscape");
     if (tempNum >= 80) {
-        landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+        landscapeView.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
     } else if (tempNum >= 70) {
-        landscape = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+        landscapeView.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
     } else if (tempNum >= 60) {
-        landscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+        landscapeView.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
     } else if (tempNum >= 50) {
-        landscape = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+        landscapeView.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     } else{
-        landscape = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+        landscapeView.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     }
-    landscapeView.textContent = landscape;
 }
 const updateTemp = temp => {
     const tempVal = document.getElementById("temp");
@@ -49,24 +48,46 @@ const onDecreaseClick = () => {
     updateTemp(temp);
 };
 
-const updateSky = () => {
-    const skyChoice = document.getElementById("skyChoice").value;
-    const skyVal = document.getElementById("sky");
+//let skyChoice = $("#skyChoice option:selected").val();
+selectElement.addEventListener('change', (event) => {
+    const updateSky = () => {
+        // const skyChoice = document.querySelector("skyChoice").value;
+        // const skyVal = document.getElementById("sky");
 
-    if (skyChoice === "Sunny") {
-        sky = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
-        
-    } else if (skyChoice === "Cloudy") {
-        sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
-        
-    } else if (skyChoice === "Rainy") {
-        sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
-        
-    } else if (skyChoice === "Snowy") {
-        sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
-        
+    //     if (skyChoice === "Sunny") {
+    //         skyVal.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";   
+    //     } else if (skyChoice === "Cloudy") {
+    //         skyVal.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+    //     } else if (skyChoice === "Rainy") {
+    //         skyVal.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";    
+    //     } else if (skyChoice === "Snowy") {
+    //         skyVal.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+    //     }
+        const skyChoice = document.querySelector(`${event.target.value}`);
+        const skyVal = document.getElementById("sky");
+        switch (skyChoice) {
+            case "Sunny":
+                skyVal.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+                break;
+            case "Cloudy":
+                skyVal.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+                break;
+            case "Rainy":
+                skyVal.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+                break;
+            case "Snowy":
+                skyVal.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+                break;
+            default:
+                skyVal.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+        }
     }
-    skyVal.textContent = sky;
+});
+
+const updateCity = () => {
+    const newCity = document.getElementById("city").value;
+    const updatedCity = document.getElementById("header-city");
+    updatedCity.textContent = newCity;
 }
 
 const registerEventHandlers = () => {
@@ -78,6 +99,7 @@ const registerEventHandlers = () => {
     updateSky();
     const skySelect = document.querySelector("sky");
     skySelect.addEventListener("change", updateSky);
+    updateCity();
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
