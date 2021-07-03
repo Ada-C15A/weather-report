@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Simple Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="start">
+    <main>
+      <header class="weather_header">
+        <h1>Weather Report</h1>
+        <h5>
+          For the lovely city of
+          <span class="header_city"></span>
+        </h5>
+      </header>
+
+      <section class="weather_garden">
+        <h2><em>Weather Garden</em></h2>
+        <div id="sky" class="sky_content"></div>
+        <div id="landscape" class="landscape_content"></div>
+      </section>
+
+      <section class="temp">
+        <h2>Temperature: <span class="yellow" id="temp_num"> 60</span></h2>
+        <button id="temp_increase">^</button>
+        <button id="temp_decrease">v</button>
+      </section>
+
+      <section id="skyContainer">
+        <h2>Sky</h2>
+        <select id="sky_select">
+          <option>Sunny</option>
+          <option>Cloudy</option>
+          <option>Rainy</option>
+          <option>Snowy</option>
+        </select>
+      </section>
+
+      <section class="reset_location">
+        <h2>City</h2>
+        <div><button id="reset">Reset</button></div>
+        <input id="typed_city" type="text" />
+      </section>
+    </main>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
