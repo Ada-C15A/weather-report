@@ -1,0 +1,77 @@
+body {
+  color: hsl(309, 42%, 32%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+  text-align: center;
+}
+.Rainy {
+  background-repeat: repeat;
+  background-size: cover;
+  color: rgb(103, 157, 201);
+}
+
+.Snowy {
+  background-repeat: repeat;
+  background-size: cover;
+  color: rgb(131, 218, 218);
+}
+
+.Cloudy {
+  background-repeat: repeat;
+  background-size: cover;
+  color: rgb(58, 65, 70);
+}
+.weather_header {
+  padding-left: 5vh;
+}
+.weather_garden {
+  text-align: center;
+  display: block;
+  background-color: rgba(128, 128, 128, 0.123);
+  min-width: 40vh;
+  max-width: 40vh;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+.temp {
+  display: block;
+  background-color: rgba(130, 38, 38, 0.605);
+  min-width: 40vh;
+  max-width: 40vh;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+#skyContainer {
+  display: block;
+  background-color: rgba(130, 38, 38, 0.605);
+  min-width: 40vh;
+  max-width: 40vh;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+.reset_location {
+  background-color: rgba(130, 38, 38, 0.605);
+  min-width: 40vh;
+  max-width: 40vh;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
