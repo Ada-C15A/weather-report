@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./styles/index.css">
+        <title>Weather Report</title>
+        <script></script>
+    </head>
+    <body>
+        <header>
+            <h1>Weather Report</h1>
+            <span>For the lovely city of
+                <span id="headerCityName" class="header__city-name">
+                    Phoenix
+                </span>
+            </span>
+        </header>
+        <main>
+            <section id="upperContent">
+                <article class="temp-section">
+                    <h2>Temperature</h2>
+                    <figure id="temperature">
+                        80º
+                    </figure>
+                    <div id="temp-controls">
+                    <button id="increaseTemperature">➕</button>
+                    <button id="decreaseTemperature">➖</button>
+                    </div>
+                </article>
+                <article class="sky-section">
+                    <h2>Sky</h2>
+                    <select id="skySelect" name="sky">
+                        <option value="sunny">Sunny</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="rainy">Rainy</option>
+                        <option value="snowy">Snowy</option>
+                    </select>
+
+                </article>
+                <article class="city-name-section">
+                    <h2>City Name</h2>
+                    <input type="text" id="cityNameInput" value="Phoenix">
+                    <button id="cityNameReset">Reset</button>
+                </article>
+            </section>
+            <section id="lowerContent">
+                <h2>Weather Garden</h2>
+                <div id="gardenContent" class="garden__content">
+                    <div id="sky"></div>
+                    <div id="landscape"></div>
+                </div>
+            </section>
+
+        </main>
+        <script src="./scripts/index.js"></script>
+    </body>
+</html>
