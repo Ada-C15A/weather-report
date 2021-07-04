@@ -17,16 +17,18 @@
             </span>
         </header>
         <main>
-            <section>
-                <article>
+            <section id="upperContent">
+                <article class="temp-section">
                     <h2>Temperature</h2>
                     <figure id="temperature">
                         80º
                     </figure>
+                    <div id="temp-controls">
                     <button id="increaseTemperature">➕</button>
                     <button id="decreaseTemperature">➖</button>
+                    </div>
                 </article>
-                <article>
+                <article class="sky-section">
                     <h2>Sky</h2>
                     <select id="skySelect" name="sky">
                         <option value="sunny">Sunny</option>
@@ -36,13 +38,13 @@
                     </select>
 
                 </article>
-                <article>
+                <article class="city-name-section">
                     <h2>City Name</h2>
                     <input type="text" id="cityNameInput" value="Phoenix">
                     <button id="cityNameReset">Reset</button>
                 </article>
             </section>
-            <section>
+            <section id="lowerContent">
                 <h2>Weather Garden</h2>
                 <div id="gardenContent" class="garden__content">
                     <div id="sky"></div>
