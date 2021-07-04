@@ -47,17 +47,23 @@ const updateSky = () => {
 }
 
 const updateGarden = () => {
+    let colorTemp = "";
     const currentTemp = state.temperature;
     const landscapeContainer = document.getElementById("landscape");
     let landscape = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     if (currentTemp >= 80) {
         landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+        colorTemp = "red";
     } else if (currentTemp >= 70) {
         landscape = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+        colorTemp = "green";
     } else if (currentTemp >= 60) {
         landscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+        colorTemp = "blue";
     }
     landscapeContainer.textContent = landscape;
+    const tempContent = document.getElementById("temperature");
+    tempContent.classList = `temperature ${colorTemp}`;
 }
 
 const updateCityName = () => {

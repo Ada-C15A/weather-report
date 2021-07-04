@@ -1,6 +1,19 @@
 body {
   background-color: #1b69f9;
 }
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
 .cloudy {
     background-color: lightgrey;
   }
