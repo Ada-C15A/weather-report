@@ -109,7 +109,7 @@ sup {
   color: var(--mid-gray);
 }
 #unit-toggle .unit.selected {
-  color: black;
+  color: inherit;
   font-weight: bold;
 }
 .temperature {
