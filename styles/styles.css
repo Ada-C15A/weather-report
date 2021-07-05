@@ -16,21 +16,22 @@ html,
 body {
   min-height: 100%;
 }
-html {
-  
-}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 110%;
   color: #1e1e1e;
   margin: 0;
+  height: 100%;
   background: linear-gradient(
     var(--silver-tr),
     var(--mid-gray-tr),
     var(--darker-gray-tr)
   );
-  background-size: cover;
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
 }
+
 h2,
 h3,
 h4,
@@ -77,11 +78,6 @@ sup {
 #container {
   height: 100%;
   padding: 1vh 2.5vw;
-  background: linear-gradient(
-    var(--silver-tr),
-    var(--mid-gray-tr),
-    var(--darker-gray-tr)
-  );
 }
 .page-header {
   text-align: center;
@@ -199,4 +195,13 @@ sup {
 @media (min-width:920px) {
   #controls {
     grid-template-areas: "city sky temperature";
-  }}
+    /* justify-content: space-around; */
+    padding: 1rem 10%;
+  }
+
+}
+@media (min-width:1061px) {
+  #controls {
+    background-size: cover;
+  }
+}
