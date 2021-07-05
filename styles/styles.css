@@ -119,9 +119,18 @@ sup {
 .temperature.today {
   font-size: 3em;
 }
+.temp-toggle {
+  width: 50%;
+}
 .long-word {
   font-size:8vw;
   word-break: break-word;
+}
+#garden-plot {
+  padding: 1rem 5%;
+  font-size: 2.5em;
+  margin-top: .125rem;
+  box-shadow: 0 0 10px var(--super-light-grey-tr);
 }
 @media (min-width:274px) {
   #days {

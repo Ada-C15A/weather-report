@@ -39,23 +39,23 @@
         </section>
         <section class="control temp">
           <h2 class="long-word">Temperature</h2>
-          <p id="temp-today" class="temperature today">
-            41&deg;
+          <p class="temperature today">
+            <span id="temp-today">_</span>
             <sup id="unit-toggle">
-              <a href="" class="unit fahrenheit selected">F&deg;</a> /
-              <a href="" class="unit celsius">C&deg;</a>
+              <a href="" class="unit fahrenheit selected">&deg;F</a> /
+              <a href="" class="unit celsius">&deg;C</a>
             </sup>
           </p>
-          <button class="temp-toggle up">
+          <button class="temp-toggle" id="raise-temp" value="1">
             Raise <span role="img" aria-hidden="true">⬆️</span></button
-          ><button class="temp-toggle down">
+          ><button class="temp-toggle" id="lower-temp" value="-1">
             Lower <span role="img" aria-hidden="true">⬇️</span>
           </button>
         </section>
       </div>
       <section id="garden">
         <h2>Weather garden</h2>
-        <p class="garden-plot"></p>
+        <p id="garden-plot">🌾🌾🍃🛤🌾🌾🌾🍃</p>
       </section>
       <section id="upcoming-week">
         <p>Weather this week</p>
