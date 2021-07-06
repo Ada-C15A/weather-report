@@ -14,6 +14,7 @@ const lookupTable = {
 const state = {
   city: "Berkeley",
   temp: 110,
+  sky: "sunny"
 };
 const setTemp = (event) => {
   if (event) {
@@ -79,13 +80,28 @@ const setCity = () => {
   cityP.innerHTML = state.city;
 };
 
+const setSky = event => {
+  console.log(event)
+  let sky = state.sky;
+  if (event) {
+    sky = event.target.value;
+    if (sky === "snowy") {
+      state.temp = 32;
+      updateUI();
+    }
+  }
+  document.getElementById("container").className = sky;
+}
+
 const setHandlers = () => {
   document.getElementById("raise-temp").addEventListener("click", setTemp);
   document.getElementById("lower-temp").addEventListener("click", setTemp);
+  document.getElementById("sky").addEventListener("change",setSky);
 };
 
 window.addEventListener("load", (event) => {
   setHandlers();
   setTemp();
   setCity();
+  setSky();
 });

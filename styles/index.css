@@ -13,7 +13,7 @@
   --darker-gray: rgb(95, 95, 95);
   --dark-gray: rgb(53, 53, 53);
   
-  --bright-sun: rgb(255,255,150);
+  --bright-sun: rgb(255,255,120);
   --pale-sun: rgb(255, 255, 245);
   
   --bright-sky: rgb(125, 220, 255);
@@ -36,7 +36,7 @@
   --cloud-gray-tr: rgba(102, 118, 139, 0.2);
   --rain-cloud-blue-tr: rgba(75, 126, 145, 0.2);
 
-  --bright-sun-tr: rgba(255,255,150,0.5);
+  --bright-sun-tr: rgba(255,255,120,0.5);
   --pale-sun-tr: rgba(255, 255, 245, 0.75);
 
   --bright-sky-tr: rgba(125, 220, 255, 0.2);
