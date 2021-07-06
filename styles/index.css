@@ -1,0 +1,48 @@
+:root {
+  --fog-gray: rgb(228, 228, 228);
+  --light-gray: rgb(200, 200, 205);
+  --silver: rgb(190, 190, 190);
+  --mid-fog-gray: rgb(175, 175, 175);
+  --pale-sky: rgb(171, 194, 209);
+  --light-rainy-sky: rgb(132, 196, 216);
+  --light-gray-blue: rgb(120, 120, 150);
+  --mid-gray: rgb(131, 131, 131);
+  --cloud-gray: rgb(102, 118, 139);
+  --mid-gray-blue: rgb(83, 106, 141);
+  --rain-cloud-blue: rgb(75, 126, 145);
+  --darker-gray: rgb(95, 95, 95);
+  --dark-gray: rgb(53, 53, 53);
+  
+  --bright-sun: rgb(255,255,150);
+  --pale-sun: rgb(255, 255, 245);
+  
+  --bright-sky: rgb(125, 220, 255);
+  --blue-sky: rgb(0, 183, 255);
+  --snowy-sky: rgb(8, 120, 155);
+  --mid-blue: rgb(54, 108, 190);
+  --deep-blue-sky: rgb(0, 94, 216);
+
+  /* Translucents */
+  --super-light-gray-tr: rgba(255, 255, 255, 0.2);
+  --silver-tr: rgba(190, 190, 190, 0.5);
+  --mid-gray-tr: rgba(200, 200, 205, 0.5);
+  --darker-gray-tr: rgba(120, 120, 150, 0.5);
+
+  --fog-gray-tr: rgba(228, 228, 228, 0.5);
+  --mid-fog-gray-tr: rgba(175, 175, 175, 0.3);
+
+  --light-rainy-sky-tr: rgba(132, 196, 216, 0.3);
+  --pale-sky-tr: rgba(171, 194, 209, 0.3);
+  --cloud-gray-tr: rgba(102, 118, 139, 0.2);
+  --rain-cloud-blue-tr: rgba(75, 126, 145, 0.2);
+
+  --bright-sun-tr: rgba(255,255,150,0.5);
+  --pale-sun-tr: rgba(255, 255, 245, 0.75);
+
+  --bright-sky-tr: rgba(125, 220, 255, 0.2);
+  --blue-sky-tr: rgba(0, 183, 255, 0.4);
+  --snowy-sky-tr: rgba(8, 120, 155, 0.3);
+  --mid-blue-tr: rgba(54, 108, 190, 0.4);
+  --deep-blue-sky-tr: rgba(0, 94, 216, 0.5);
+
+}

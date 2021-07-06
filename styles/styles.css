@@ -1,19 +1,9 @@
 @charset "UTF-8";
-:root {
-  --silver: rgb(190, 190, 190);
-  --mid-gray: rgb(200, 200, 205);
-  --darker-gray: rgb(120, 120, 150);
-  --dark-gray: rgb(53, 53, 53);
-  --light-gray-blue: rgb(54, 108, 190);
+@import "index.css";
 
-  /* Translucents */
-  --super-light-grey-tr: rgba(255, 255, 255, 0.2);
-  --silver-tr: rgba(190, 190, 190, 0.5);
-  --mid-gray-tr: rgba(200, 200, 205, 0.5);
-  --darker-gray-tr: rgba(120, 120, 150, 0.5);
-}
 html,
-body {
+body,
+#container {
   min-height: 100%;
 }
 
@@ -45,8 +35,6 @@ h6 {
   letter-spacing: 1px;
 }
 h1 {
-  /* linear-gradient(var(--light-gray-blue), var(--dark-gray) */
-
   background-color: var(--mid-gray);
   background-image: linear-gradient(45deg, #f3ec78, #af4261);
   background-size: 100%;
@@ -59,6 +47,24 @@ h1 {
   font-weight: 100;
   font-size: 15vw;
   margin: 0;
+}
+.cloudy h1 {
+  background-image: linear-gradient(90deg, var(--light-rainy-sky), var(--cloud-gray));
+}
+.rainy h1 {
+  background-image: linear-gradient(var(--light-gray-blue), var(--dark-gray));
+}
+.sunny h1 {
+  background-image: linear-gradient(var(--blue-sky), var(--bright-sun));
+}
+.windy h1 {
+  background-image: linear-gradient(var(--pale-sun), var(--blue-sky));
+}
+.foggy h1 {
+  background-image: linear-gradient(var(--fog-gray), var(--mid-fog-gray));
+}
+.snowy h1 {
+  background-image: linear-gradient(var(--pale-sky), white);
 }
 a:link {
   color: #1c2958;
@@ -76,8 +82,26 @@ sup {
   white-space: nowrap;
 }
 #container {
-  height: 100%;
+  height: 100vh;
   padding: 1vh 2.5vw;
+}
+#container.cloudy {
+  background-image: linear-gradient(var(--pale-sky-tr),var(--cloud-gray-tr));
+}
+#container.rainy {
+  background-image: linear-gradient(var(--light-rainy-sky-tr),var(--rain-cloud-blue-tr));
+}
+#container.sunny {
+  background-image: radial-gradient(circle at 5% 5%, var(--bright-sun-tr),var(--blue-sky-tr),var(--mid-blue-tr));
+}
+#container.windy {
+  background-image: radial-gradient(circle at 15% 5%, var(--pale-sun-tr),var(--deep-blue-sky-tr),var(--bright-sky-tr));
+}
+#container.foggy {
+  background-image: linear-gradient(var(--fog-gray-tr),var(--mid-fog-gray-tr));
+}
+#container.snowy {
+  background-image: linear-gradient(var(--snowy-sky-tr),var(--darker-gray-tr));
 }
 .page-header {
   text-align: center;
@@ -92,10 +116,10 @@ sup {
 .control,
 .daily-weather {
   background-color: var(--silver-tr);
-  border: 5px solid var(--super-light-grey-tr);
+  border: 5px solid var(--super-light-gray-tr);
 
   border-radius: 5px;
-  margin: 0 .25rem;
+  margin: 0 0.25rem;
   padding: 0.25rem;
 }
 .control input {
@@ -123,30 +147,31 @@ sup {
   width: 50%;
 }
 .long-word {
-  font-size:8vw;
+  font-size: 8vw;
   word-break: break-word;
 }
 #garden-plot {
   padding: 1rem 5%;
   font-size: 2.5em;
-  margin-top: .125rem;
-  box-shadow: 0 0 10px var(--super-light-grey-tr);
+  margin-top: 0.125rem;
+  box-shadow: 0 0 10px var(--super-light-gray-tr);
+  text-shadow: 0 4px 8px var(--darker-gray-tr);
 }
-@media (min-width:274px) {
+@media (min-width: 274px) {
   #days {
     display: grid;
-    grid-template-columns: repeat(autofit,minmax(105px,1fr));
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(autofit, minmax(105px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width:320px) {
+@media (min-width: 320px) {
   .long-word {
     font-size: 1.5em;
   }
 }
-@media (min-width:412px) {
+@media (min-width: 412px) {
   #days {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 500px) {
@@ -165,11 +190,8 @@ sup {
   .control.temp {
     grid-area: temperature;
   }
-  /* .long-word {
-    font-size:4.125vw;
-    word-break: break-word;
-  } */
-  
+
+
   .temperature.today {
     font-size: 3.5em;
   }
@@ -178,9 +200,9 @@ sup {
     padding: 0.5rem;
   }
 }
-@media (min-width:548px) {
+@media (min-width: 548px) {
   #days {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 660px) {
@@ -191,25 +213,24 @@ sup {
     padding: 1rem;
   }
 }
-@media (min-width:684px) {
+@media (min-width: 684px) {
   #days {
-    grid-template-areas: repeat(5,1fr);
+    grid-template-areas: repeat(5, 1fr);
   }
 }
-@media (min-width:820px) {
+@media (min-width: 820px) {
   #days {
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
-@media (min-width:920px) {
+@media (min-width: 920px) {
   #controls {
     grid-template-areas: "city sky temperature";
     /* justify-content: space-around; */
     padding: 1rem 10%;
   }
-
 }
-@media (min-width:1061px) {
+@media (min-width: 1061px) {
   #controls {
     background-size: cover;
   }
