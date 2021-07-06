@@ -75,10 +75,18 @@ const updateUI = () => {
   gardenPlot.innerHTML = gardenContents;
 };
 
-const setCity = () => {
+const setCity = event => {
+  city = state.city;
+  if (event) {
+    city = event.target.value;
+  }
   cityP = document.getElementById("city-display");
-  cityP.innerHTML = state.city;
+  cityP.innerHTML = city;
 };
+
+const resetCity = () => {
+  state.city = "Berkeley";
+}
 
 const setSky = event => {
   console.log(event)
@@ -93,10 +101,13 @@ const setSky = event => {
   document.getElementById("container").className = sky;
 }
 
+
 const setHandlers = () => {
   document.getElementById("raise-temp").addEventListener("click", setTemp);
   document.getElementById("lower-temp").addEventListener("click", setTemp);
   document.getElementById("sky").addEventListener("change",setSky);
+  document.getElementById("city").addEventListener("input",setCity);
+  document.getElementById("city-reset").addEventListener("click",resetCity);
 };
 
 window.addEventListener("load", (event) => {
