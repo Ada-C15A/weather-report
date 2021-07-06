@@ -1,6 +1,6 @@
 const state = {
   city: "Berkeley",
-  temp: 52,
+  temp: 101,
 };
 const setTemp = (event) => {
   if (event) {
@@ -17,7 +17,11 @@ const setTemp = (event) => {
 const updateUI = () => {
   const temp = state.temp;
   const tempToday = document.getElementById("temp-today");
-  if (temp >= 30 && temp < 40) {
+  if (temp < 22) {
+    todaysColorCode = "#13d";
+  } else if (temp >= 22 && temp < 32) {
+    todaysColorCode = "#29f";
+  } else if (temp >= 32 && temp < 40) {
     todaysColorCode = "#2de";
   } else if (temp >= 40 && temp < 50) {
     todaysColorCode = "#00b8b8";
@@ -31,8 +35,10 @@ const updateUI = () => {
     todaysColorCode = "red";
   } else if (temp >= 90 && temp < 100) {
     todaysColorCode = "darkred";
-  } else if (temp >= 100) {
-    todaysColorCode = "#831";
+  } else if (temp >= 100 && temp < 110) {//8b0100
+    todaysColorCode = "#731";
+  } else if (temp >= 110) {
+    todaysColorCode = "#421";
   }
   console.log({ temp, todaysColorCode });
   tempToday.style.color = todaysColorCode;
@@ -42,8 +48,6 @@ const setCity = () => {
   cityP = document.getElementById("city-display");
   cityP.innerHTML = state.city;
 };
-// check if button got pressed
-// then either increase or decrease the
 
 const setHandlers = () => {
   document.getElementById("raise-temp").addEventListener("click", setTemp);
