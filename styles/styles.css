@@ -130,7 +130,7 @@ sup {
   font-weight: normal;
 }
 #unit-toggle a {
-  color: var(--mid-gray);
+  color: var(--mid-gray-tr);
 }
 #unit-toggle .unit.selected {
   color: inherit;
@@ -142,6 +142,10 @@ sup {
 }
 .temperature.today {
   font-size: 3em;
+}
+#temp-today {
+  display: inline-block;
+  width:6rem;
 }
 .temp-toggle {
   width: 50%;

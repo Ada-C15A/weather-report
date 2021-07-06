@@ -24,7 +24,6 @@ const state = {
   sky: "sunny",
 };
 const setTemp = (event) => {
-  console.log("setTemp\n",{state})
   if (event) {
     newVal = event.target.value
       ? parseInt(event.target.value)
@@ -78,7 +77,7 @@ const updateUI = () => {
     currentColorCode = lookupTable[110][0];
     gardenContents = lookupTable[110][1];
   }
-  console.log("Update UI:\n",{state})
+
   temperatureSpan.innerHTML = state.temperature;
   temperatureSpan.style.color = currentColorCode;
 
@@ -128,7 +127,6 @@ const setUnit = (event) => {
       } else {
         state.temperature = Math.round((state.temperature * 9/5 + 32));
       }
-      console.log({ state });
       fahrenheitLink.classList.toggle("selected");
       celsiusLink.classList.toggle("selected");
     }
