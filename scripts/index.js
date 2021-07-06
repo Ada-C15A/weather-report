@@ -1,6 +1,19 @@
+const lookupTable = {
+  110: ["#321", "☀️🔥☀️🐜🍂🔥🍂🦂🔥"],
+  100: ["#731", "☀️🍂🌵🥀🦂🌵🍂🐜🍂"],
+  90: ["drkred", "🌵🦎🍂🌴🐍🌵🦂🌵🥀"],
+  80: ["red", "🏜🌴🌵🐍🌻🦂🌵🌺🌵🐍"],
+  70: ["orange", "🌸🌿🌼🌷🌻🌿☘️🌱🌻🌷"],
+  60: ["yellow", "🌾🌾🍃🌱🛤🌾☘️🌾🌾🍃"],
+  50: ["#1b5", "🌲🍃🍄🌲🍁🌲🌲🍂🌲"],
+  40: ["#00b8b8", "🌧🌲💨🍄🌲🌧🌲🍂🌲🌧"],
+  32: ["#2de", "🌧💨⛄️🌲🌧⛄️🌧💨🌲🌧"],
+  22: ["#29f", "❄️⛄️💨🌧⛄️❄️💨🌲💨🌨⛄️❄️"],
+  21: ["#13d", "❄️💨🌨❄️💨❄️☃️❄️💨🌨"]
+}
 const state = {
   city: "Berkeley",
-  temp: 101,
+  temp: 110,
 };
 const setTemp = (event) => {
   if (event) {
@@ -9,39 +22,56 @@ const setTemp = (event) => {
       parseInt(event.target.dataset.temp);
     state.temp += newVal;
   }
-  let todaysTemp = document.getElementById("temp-today");
-  todaysTemp.innerHTML = state.temp;
   updateUI();
 };
 
 const updateUI = () => {
   const temp = state.temp;
-  const tempToday = document.getElementById("temp-today");
+  let currentColorCode;
+  let gardenContents;
+
+  const temperatureSpan = document.getElementById("temp-today");
+  const gardenPlot = document.getElementById("garden-plot");
+  
   if (temp < 22) {
-    todaysColorCode = "#13d";
+    currentColorCode = lookupTable[21][0];
+    gardenContents = lookupTable[21][1];
   } else if (temp >= 22 && temp < 32) {
-    todaysColorCode = "#29f";
+    currentColorCode = lookupTable[22][0];
+    gardenContents = lookupTable[22][1];
   } else if (temp >= 32 && temp < 40) {
-    todaysColorCode = "#2de";
+    currentColorCode = lookupTable[32][0];
+    gardenContents = lookupTable[32][1];
   } else if (temp >= 40 && temp < 50) {
-    todaysColorCode = "#00b8b8";
+    currentColorCode = lookupTable[40][0];
+    gardenContents = lookupTable[40][1];
   } else if (temp >= 50 && temp < 60) {
-    todaysColorCode = "#1b5";
+    currentColorCode = lookupTable[50][0];
+    gardenContents = lookupTable[50][1];
   } else if (temp >= 60 && temp < 70) {
-    todaysColorCode = "yellow";
+    currentColorCode = lookupTable[60][0];
+    gardenContents = lookupTable[60][1];
   } else if (temp >= 70 && temp < 80) {
-    todaysColorCode = "orange";
+    currentColorCode = lookupTable[70][0];
+    gardenContents = lookupTable[70][1];
   } else if (temp >= 80 && temp < 90) {
-    todaysColorCode = "red";
+    currentColorCode = lookupTable[80][0];
+    gardenContents = lookupTable[80][1];
   } else if (temp >= 90 && temp < 100) {
-    todaysColorCode = "darkred";
-  } else if (temp >= 100 && temp < 110) {//8b0100
-    todaysColorCode = "#731";
+    currentColorCode = lookupTable[90][0];
+    gardenContents = lookupTable[90][1];
+  } else if (temp >= 100 && temp < 110) {
+    currentColorCode = lookupTable[100][0];
+    gardenContents = lookupTable[100][1];
   } else if (temp >= 110) {
-    todaysColorCode = "#421";
+    currentColorCode = lookupTable[110][0];
+    gardenContents = lookupTable[110][1];
   }
-  console.log({ temp, todaysColorCode });
-  tempToday.style.color = todaysColorCode;
+
+  temperatureSpan.innerHTML = state.temp;
+  temperatureSpan.style.color = currentColorCode;
+
+  gardenPlot.innerHTML = gardenContents;
 };
 
 const setCity = () => {
