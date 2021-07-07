@@ -17,7 +17,7 @@
         <h1>Weather App</h1>
         <p>For the city of <span id="city-display">_</span></p>
       </header>
-      <div id="controls">
+      <div id="controls" class="winter">
         <section class="control city">
           <h2>City</h2>
           <form action="" class="city-updater">
@@ -37,6 +37,16 @@
               <option value="windy">windy</option>
               <option value="foggy">foggy</option>
               <option value="snowy">snowy</option>
+            </select>
+          </form>
+          <h2>Season</h2>
+          <form action="" id="season-selects"><label for="season"></label>
+            <select name="season" id="season">
+              <option value=""></option>
+              <option value="spring">spring</option>
+              <option value="summer">summer</option>
+              <option value="fall">fall</option>
+              <option value="winter">winter</option>
             </select>
           </form>
         </section>

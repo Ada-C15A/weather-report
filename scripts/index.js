@@ -135,6 +135,13 @@ const setUnit = (event) => {
   updateUI();
 };
 
+const setSeason = event => {
+  if (event) {
+    document.getElementById("controls").className = event.target.value;
+  }
+
+}
+
 const setHandlers = () => {
   document.getElementById("raise-temp").addEventListener("click", setTemp);
   document.getElementById("lower-temp").addEventListener("click", setTemp);
@@ -144,6 +151,8 @@ const setHandlers = () => {
 
   document.getElementById("fahrenheit").addEventListener("click", setUnit);
   document.getElementById("celsius").addEventListener("click", setUnit);
+
+  document.getElementById("season").addEventListener("change",setSeason);
 };
 
 window.addEventListener("load", (event) => {

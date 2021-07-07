@@ -110,8 +110,20 @@ sup {
   padding: 0.125rem;
 }
 #controls {
-  background: url(../assets/seasons.jpg) 0 32.5%;
+  background-image: url(../assets/seasons.jpg);
   /* 5%, 32.5%, 62.5%, 92.5 */
+}
+#controls.spring {
+  background-position: 0 5%;
+}
+#controls.summer {
+  background-position:0 32.5%;
+}
+#controls.fall {
+  background-position:0 62.5%;
+}
+#controls.winter {
+  background-position:0 92.5%;
 }
 .control,
 .daily-weather {
