@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <title>Weather Report</title>
+  <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+  <header>
+    <h1>Weather Report</h1>
+    <span>For the lovely city of<span>
+  </header>
+  <section class="allTemperature">
+    <h2>Temperature</h2> 
+    <div class="temperatureSection">
+      <div class="temperatureSectionBtns"></div>
+        <span id="increaseTempBtn">⬆️</span>
+        <span id="decreaseTempBtn">⬇️</span>
+      </div>
+      <span id="tempStart">71</span>
+    </div>
+  </section>
+
+    <section class="skySection">
+      <h2>Sky</h2>
+    <select id="skyDropdown">
+      <option>SUNSHINE</option>
+      <option>CLOUDS</option>
+      <option>RAIN</option>
+      <option>SNOW</option>
+    </select>
+  </section>
+
+  <section class="cityNameSection">
+    <h2>City Name</h2>
+    <input type="text" id="cityNameHere" value="Los Angeles">
+    <button id="resetBtn">RESET</button>
+  </section>
+
+  <section class="gardenSection">
+    <h2>Weather Garden</h2>
+    <div id="sky"></div>
+  </section>
+  
+  </body>
+</html>
