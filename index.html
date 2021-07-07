@@ -27,27 +27,25 @@
     </div>
   </section>
 
-    <section>
-    <!-- this will need to be in a class -->
-    <h2>Sky</h2>
-    <!-- this is in a drop down -->
-    <option>SUNSHINE</option>
-    <option>CLOUDS</option>
-    <option>RAIN</option>
-    <option>RAIN</option>
+    <section class="skySection">
+      <h2>Sky</h2>
+    <select id="skyDropdown">
+      <option>SUNSHINE</option>
+      <option>CLOUDS</option>
+      <option>RAIN</option>
+      <option>SNOW</option>
+    </select>
   </section>
 
-  <section>
-    <!-- this will need to be in a class -->
+  <section class="cityNameSection">
     <h2>City Name</h2>
+    <input type="text" id="cityNameHere" value="Los Angeles">
     <button id="resetBtn">RESET</button>
-    <!-- text box city, reset btn, default val? -->
   </section>
 
-  <section>
-    <!-- this will need to be in a class -->
+  <section class="gardenSection">
     <h2>Weather Garden</h2>
-    <!-- this is there the emojis go -->
+    <div id="sky"></div>
   </section>
   
   </body>
