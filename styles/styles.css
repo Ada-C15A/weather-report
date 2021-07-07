@@ -88,7 +88,7 @@ select {
   width:100%;
 }
 #container {
-  height: 100vh;
+  height:100%;
   padding: 1vh 2.5vw;
 }
 #container.cloudy {
@@ -142,6 +142,11 @@ select {
 }
 .control input {
   width: 92%;
+}
+.daily-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 #unit-toggle {
   font-size: 0.5em;
