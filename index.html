@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="container" class="">
+      <header class="page-header">
+        <h1>Weather App</h1>
+        <p>For the city of <span id="city-display">_</span></p>
+      </header>
+      <div id="controls" class="">
+        <section class="control city">
+          <h2>City</h2>
+          <form action="" class="city-updater">
+            <input type="text" id="city"  />
+            <button id="city-reset">Reset</button>
+          </form>
+        </section>
+        <section class="control sky">
+          <h2>Sky</h2>
+          <form action="" id="sky-selects">
+            <label for="sky">Set the sky to:</label>
+            <select name="sky" id="sky">
+              <option value=""></option>
+              <option value="cloudy">cloudy</option>
+              <option value="rainy">rainy</option>
+              <option value="sunny">sunny</option>
+              <option value="windy">windy</option>
+              <option value="foggy">foggy</option>
+              <option value="snowy">snowy</option>
+            </select>
+          </form>
+          <h2>Season</h2>
+          <form action="" id="season-selects"><label for="season">Set the season to:</label>
+            <select name="season" id="season">
+              <option value=""></option>
+              <option value="spring">spring</option>
+              <option value="summer">summer</option>
+              <option value="fall">fall</option>
+              <option value="winter">winter</option>
+            </select>
+          </form>
+        </section>
+        <section class="control temp">
+          <h2 class="long-word">Temperature</h2>
+          <p class="temperature today">
+            <span id="temp-today">_</span>
+            <sup id="unit-toggle">
+              <a href="" id="fahrenheit" class="unit">&deg;F</a> /
+              <a href="" id="celsius" class="unit">&deg;C</a>
+            </sup>
+          </p>
+          <button class="temp-toggle" id="raise-temp" value="1">
+            Raise <span role="img" aria-hidden="true" data-temp="1">⬆️</span></button
+          ><button class="temp-toggle" id="lower-temp" value="-1">
+            Lower <span role="img" aria-hidden="true" data-temp="-1">⬇️</span>
+          </button>
+        </section>
+      </div>
+      <section id="garden">
+        <h2>Weather garden</h2>
+        <p id="garden-sky"></p>
+        <p id="garden-plot"></>
+      </section>
+      <section id="upcoming-week">
+        <h2>Weather this week</h2>
+        <div id="days">
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>Tomorrow</p>
+            <p class="temperature">62&deg;</p>
+          </div>
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>The day after</p>
+            <p class="temperature">62&deg;</p>
+          </div>
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>Day after that</p>
+            <p class="temperature">62&deg;</p>
+          </div>
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>Next day</p>
+            <p class="temperature">62&deg;</p>
+          </div>
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>Following day</p>
+            <p class="temperature">62&deg;</p>
+          </div>
+          <div class="daily-weather">
+            <img src="" alt="" class="icon" />
+            <p>Six days from today</p>
+            <p class="temperature">62&deg;</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
