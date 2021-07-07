@@ -81,6 +81,12 @@ a:active {
 sup {
   white-space: nowrap;
 }
+select {
+  margin-top:.25rem;
+  font-size: 1.25rem;
+  display: block;
+  width:100%;
+}
 #container {
   height: 100vh;
   padding: 1vh 2.5vw;

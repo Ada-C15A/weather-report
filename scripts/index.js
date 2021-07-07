@@ -139,7 +139,6 @@ const setSeason = event => {
   if (event) {
     document.getElementById("controls").className = event.target.value;
   }
-
 }
 
 const setHandlers = () => {
