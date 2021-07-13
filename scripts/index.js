@@ -1,103 +1,133 @@
-let tempValue = 70;
-
-const updateTempStyles = (currentTemp) => {
-    const tempValueContainer = document.getElementById("tempValue");
-    let color = "teal";
-    if ( currentTemp >= 80) {
-        color = "red";
-    } else if (currentTemp >= 70) {
-        color = "orange";
-    } else if (currentTemp >= 60) {
-        color = "yellow";
-    } else if (currentTemp >= 50) {
-        color = "green";
-    }
-    tempValueContainer.classList = color;
-}
-
-const updateGarden = (currentTemp) => {
-    const landscapeContainer = document.getElementById("landscape");
-    let landscape = "🌲______⛄️🌲🌲🏂🏻🌲__🌲";
-    if ( currentTemp >= 80) {
-        landscape = "🧗🏾____🌵🌵🌵__🐍__🌵🌵";
-    } else if (currentTemp >= 70) {
-        landscape = "🌻🌻🌻__🌻🌻_🐿_🌷__🌷🌷";
-    } else if (currentTemp >= 60) {
-        landscape = "💃🏿💃🏾💃🏽💃🏼💃🏻__🚴🏿_🚴🏾🚴🏽🚴🏼🚴🏻";
-    }
-    landscapeContainer.textContent = landscape;
-}
-
-const updateTemp = tempValue => {
-    const tempValueContainer = document.getElementById("tempValue");
-    tempValueContainer.textContent = tempValue;
-    updateTempStyles(tempValue);
-    updateGarden(tempValue);
-}
+const state = {
+    tempCount: 70
+};
 
 const increaseTemp = () => {
-    tempValue += 1;
-    updateTemp(tempValue);
+    state.tempCount += 1
+    const count = document.querySelector("#temperature");
+    count.textContent = state.tempCount;
+
+    if (state.tempCount > 79) {
+        red();
+        hot();
+    } else if (state.tempCount > 69) {
+        orange();
+        mild();
+    } else if (state.tempCount > 59)  {
+        yellow();
+        regular();
+    } else if (state.tempCount > 49) {
+        green();
+        cool();
+    } else {
+        blue();
+        cold();
+    };
 };
 
 const decreaseTemp = () => {
-    tempValue -= 1;
-    updateTemp(tempValue);
+    state.tempCount -= 1
+    const count = document.querySelector("#temperature");
+    count.textContent = state.tempCount;
+
+    if (state.tempCount > 79) {
+        red();
+        hot();
+    } else if (state.tempCount > 69) {
+        orange();
+        mild();
+    } else if (state.tempCount > 59)  {
+        yellow();
+        regular();
+    } else if (state.tempCount > 49) {
+        green();
+        cool();
+    } else {
+        blue();
+        cold();
+    };
 };
 
-const updateSky = () => {
-    const inputSky = document.getElementById("skySelect").value;
-    const skyContainer = document.getElementById("sky");
-    let sky = "";
-    let skyColor = "";
-    if (inputSky === "Cloudy") {
-        sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
-        skyColor = "cloudy";
-    } else if (inputSky === "Sunny") {
-        sky = "☁️   ☁️ ☁️  ☀️ ☁️   ☁️ ✈️ ";
-        skyColor = "sunny";
-    } else if (inputSky === "Rainy") {
-        sky = "⛈🌧☁️☁️🌧🌧☁️🌧 🌦 🌧☁️☁️🌧";
-        skyColor = "rainy";
-    } else if (inputSky === "Snowy") {
-        sky = "​🌬​🌨​☁️☁️❄️☁️🌨❄️🌨☁️🌨🌨☁️";
-        skyColor = "snowy";
-    }
-    skyContainer.textContent = sky;
-    const gardenContent = document.getElementById("gardenContent");
-    gardenContent.classList = `garden__content ${skyColor}`;
+const blue = () => {
+    const currentTemp = document.querySelector("#temperature");
+    currentTemp.className = `blue`;
+};
+const green = () => {
+    const currentTemp = document.querySelector("#temperature");
+    currentTemp.className = `green`;
+};  
+const yellow = () => {
+    const currentTemp = document.querySelector("#temperature");
+    currentTemp.className = `yellow`;
+};  
+const orange = () => {
+    const currentTemp = document.querySelector("#temperature");
+    currentTemp.className = `orange`;
+}; 
+const red = () => {
+    const currentTemp = document.querySelector("#temperature");
+    currentTemp.className = `red`;
 };
 
-const updateCityName = () => {
-    const inputName = document.getElementById("cityNameInput").value;
-    const headerCityName = document.getElementById("headerCityName");
-    headerCityName.textContent = inputName;
+const updateName = (event) => {
+    const cityName = document.querySelector("#sampleCity");
+    cityName.textContent = event.target.value;
 };
 
-const resetCityName = () => {
-    const cityNameInput = document.getElementById("cityNameInput");
-    cityNameInput.value = "Seattle";
-    updateCityName();
+const resetName = () => {
+    const cityName = document.querySelector("#sampleCity");
+    cityName.textContent = "Seattle"
+}
+
+const cold = () => {
+    const floorLevel = document.querySelector("#floor");
+    floorLevel.textContent = "🌲______⛄️🌲🌲🏂🏻🌲__🌲";
+};
+const cool = () => {
+    const floorLevel = document.querySelector("#floor");
+    floorLevel.textContent = "🧗🏾____🌵🌻_🐿_🌷__🌷🌷";
+};
+const regular = () => {
+    const floorLevel = document.querySelector("#floor");
+    floorLevel.textContent = "🌻🌻🌻__🌻🌻_🐿_🌷__🌷🌷";
+};
+const mild = () => {
+    const floorLevel = document.querySelector("#floor");
+    floorLevel.textContent = "💃🏿💃🏾💃🏽💃🏼💃🏻__🚴🏿_🚴🏾🚴🏽🚴🏼🚴🏻";
+};
+const hot = () => {
+    const floorLevel = document.querySelector("#floor");
+    floorLevel.textContent = "🧗🏾____🌵🌵🌵__🐍__🌵🌵";
 };
 
-const registerEventHandlers = () => {
-    updateTemp(tempValue);
-    const increaseTempControl = document.getElementById("increaseTempControl");
-    increaseTempControl.addEventListener("click", increaseTemp);
-    
-    const decreaseTempControl = document.getElementById("decreaseTempControl");
-    decreaseTempControl.addEventListener("click", decreaseTemp);
-
-    updateSky();
-    const skySelect = document.getElementById("skySelect");
-    skySelect.addEventListener("change", updateSky);
-
-    updateCityName();
-    const cityNameInput = document.getElementById("cityNameInput");
-    cityNameInput.addEventListener("input", updateCityName);
-
-    const cityNameResetBtn = document.getElementById("cityNameReset");
-    cityNameResetBtn.addEventListener("click", resetCityName);
+const pickSky = (event) => {
+    const sky = document.querySelector("#sky");
+    if (event.target.value === "snowy"){
+        sky.textContent = "🌬​🌨​☁️☁️❄️☁️🌨❄️🌨☁️🌨🌨☁️";
+    }else if (event.target.value === "rainy"){
+        sky.textContent = "⛈🌧☁️☁️🌧🌧☁️🌧 🌦 🌧☁️☁️🌧";
+    }else if (event.target.value === "cloudy") {
+        sky.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+    }else if (event.target.value === "sunny") {
+        sky.textContent = "☁️   ☁️ ☁️  ☀️ ☁️   ☁️ ✈️ ";
+    };
 };
 
-document.addEventListener("DOMContentLoaded", registerEventHandlers);
+const registerEventhandlers = () => {
+    const increaseButton = document.querySelector("#plusButton");
+    increaseButton.addEventListener("click", increaseTemp);
+
+    const decreaseButton = document.querySelector("#minusButton");
+    decreaseButton.addEventListener("click", decreaseTemp);
+
+    const textInput = document.querySelector("#cityName");
+    textInput.addEventListener("input", updateName);
+
+    const resetButton = document.querySelector("#resetButton");
+    resetButton.addEventListener("click", resetName);
+
+    const skySelect = document.querySelector("#skies");
+    skySelect.addEventListener("change", pickSky);
+};
+
+document.addEventListener("DOMContentLoaded", registerEventhandlers);
