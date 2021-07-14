@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="styles/index.css" rel="stylesheet" type="text/css"/>
+    <title>Weather</title>
+  </head>
+  <body>
+    <h1>Weather for City of 
+      <span id="sampleCity">Seattle</span>
+    </h1>
+    <section id="boxes">
+      <section id="tempSection">
+        <h2 id="tempCount">Temperature: 
+          <span id="temperature">70</span>
+        </h2>
+          <button id="plusButton">+</button>
+          <button id="minusButton">-</button>
+      </section>
+      <section id="nameChangeSection">
+        <label>Change City:</label>
+        <input type="text" id="cityName" value="Seattle">
+        <button id="resetButton">Reset</button>
+      </section>
+      <section id="skySection">
+        <label>Change Sky:</label>
+        <select id="skies">
+          <option>--options--</option>
+          <option>snowy</option>
+          <option>cloudy</option>
+          <option>rainy</option>
+          <option>sunny</option>
+        </select>
+      </section>
+    </section>
+    <section id="gardenSection">
+      <div id="sky">☁️   ☁️ ☁️  ☀️ ☁️   ☁️ ✈️ </div>
+      <div id="floor">🌻🌻🌻__🌻🌻_🐿_🌷__🌷🌷</div>
+    </section>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
